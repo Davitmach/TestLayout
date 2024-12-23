@@ -1,0 +1,437 @@
+.About_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+  overflow: hidden;
+  @media (min-width: 545px) and (max-width: 1236px) {
+    padding: 50px 20px;
+  }
+  @media (max-width: 544px) {
+    padding: 50px 20px;
+  }
+  @media (max-width: 1195px) {
+    flex-direction: column;
+    gap: 50px;
+
+
+  }
+  .Info_box {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1;
+ 
+    .Title_box {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      &:has(:hover) {
+        h2 {
+          color: rgba(255, 255, 255, 0.3);
+        }
+        h1 {
+          color: white;
+        }
+      }
+      h1 {
+        color: rgba(255, 255, 255, 0.3);
+        font-weight: 400;
+        font-size: 50px;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+      h2 {
+        color: rgba(255, 255, 255, 1);
+        font-weight: 400;
+        font-size: 50px;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+    }
+    .Description_box {
+      max-width: 580px;
+      width: 100%;
+  
+      p {
+        font-weight: 400;
+        font-size: 26px;
+      }
+    }
+  }
+  .Btn_container {
+    position: relative;
+    max-width: 900px;
+    height: 345px;
+    width: 100%;
+ 
+    @media (max-width:1558px) {
+        max-width: 800px;
+    }
+    @media (max-width: 773px) {
+   width: 1000px ;
+    
+    
+      }
+      @media (max-width: 491px) {
+        width: 600px ;
+         
+         
+           }
+           @media (max-width: 343px) {
+            width: 600px ;
+             
+             
+               }
+    & > * {
+      position: absolute;
+    }
+    & > div {
+      border-radius: 50px;
+      color: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: 0.4s;
+      @media (max-width: 491px) {
+      padding: 10px 15px;
+         
+           }
+           @media (max-width: 343px) {
+          padding: 5px 10px;
+          font-size: 14px;
+             
+             
+               }
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
+      &:active {
+        
+        background: linear-gradient(
+          278.85deg,
+          #cda5d5 3.36%,
+          #fbe4ff 48.72%,
+          #e8fe74 99.06%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-color: #fbe4ff;
+      }
+    }
+    & > div:first-child {
+      top: 0px;
+      left: 30%;
+      animation: shake1 10s ease-in-out infinite;
+      @keyframes shake1 {
+        0% {
+          transform: translate(0, 0);
+        }
+        10% {
+          transform: translate(-2px, -2px);
+        }
+        20% {
+          transform: translate(2px, 2px);
+        }
+        30% {
+          transform: translate(-1px, -1px);
+        }
+        40% {
+          transform: translate(1px, 1px);
+        }
+        50% {
+          transform: translate(-2px, 2px);
+        }
+        60% {
+          transform: translate(2px, -2px);
+        }
+        70% {
+          transform: translate(-1px, 1px);
+        }
+        80% {
+          transform: translate(1px, -1px);
+        }
+        90% {
+          transform: translate(-2px, 1px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      top: -6px;
+      left: 55%;
+      animation: shake2 10s ease-in-out infinite;
+      @keyframes shake2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        10% {
+          transform: translate(1px, 1px);
+        }
+        20% {
+          transform: translate(-1px, -1px);
+        }
+        30% {
+          transform: translate(2px, -2px);
+        }
+        40% {
+          transform: translate(-2px, 2px);
+        }
+        50% {
+          transform: translate(0, 0);
+        }
+        60% {
+          transform: translate(-1px, 1px);
+        }
+        70% {
+          transform: translate(1px, -1px);
+        }
+        80% {
+          transform: translate(-1px, -1px);
+        }
+        90% {
+          transform: translate(2px, 2px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      top: 60px;
+      left: 20%;
+      animation: shake3 10s ease-in-out infinite;
+      @keyframes shake3 {
+        0% {
+          transform: translate(0, 0);
+        }
+        15% {
+          transform: translate(-3px, 0);
+        }
+        30% {
+          transform: translate(3px, 0);
+        }
+        45% {
+          transform: translate(-3px, 0);
+        }
+        60% {
+          transform: translate(3px, 0);
+        }
+        75% {
+          transform: translate(-2px, 0);
+        }
+        90% {
+          transform: translate(2px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:nth-child(4) {
+      top: 80px;
+      left: 40%;
+      animation: shake4 10s ease-in-out infinite;
+      @keyframes shake4 {
+        0% {
+          transform: translate(0, 0);
+        }
+        20% {
+          transform: translate(2px, 2px);
+        }
+        40% {
+          transform: translate(-2px, -2px);
+        }
+        60% {
+          transform: translate(1px, -1px);
+        }
+        80% {
+          transform: translate(-1px, 1px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:nth-child(5) {
+      top: 70px;
+      left: 60%;
+      animation: shake5 10s ease-in-out infinite;
+      @keyframes shake5 {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(-4px, 0);
+        }
+        50% {
+          transform: translate(4px, 0);
+        }
+        75% {
+          transform: translate(-2px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:nth-child(6) {
+      top: 135px;
+      left: 23%;
+      animation: shake6 10s ease-in-out infinite;
+      @keyframes shake6 {
+        0% {
+          transform: translate(0, 0);
+        }
+        10% {
+          transform: translate(1px, -1px);
+        }
+        20% {
+          transform: translate(-1px, 1px);
+        }
+        30% {
+          transform: translate(2px, -2px);
+        }
+        40% {
+          transform: translate(-2px, 2px);
+        }
+        50% {
+          transform: translate(1px, -1px);
+        }
+        60% {
+          transform: translate(-1px, 1px);
+        }
+        70% {
+          transform: translate(2px, -2px);
+        }
+        80% {
+          transform: translate(-2px, 2px);
+        }
+        90% {
+          transform: translate(1px, -1px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:nth-child(7) {
+      top: 165px;
+      left: 43%;
+      animation: shake7 10s ease-in-out infinite;
+      @keyframes shake7 {
+        0% {
+          transform: translate(0, 0);
+        }
+        20% {
+          transform: translate(3px, 0);
+        }
+        40% {
+          transform: translate(-3px, 0);
+        }
+        60% {
+          transform: translate(1px, 0);
+        }
+        80% {
+          transform: translate(-1px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:nth-child(8) {
+      top: 150px;
+      left: 63%;
+      animation: shake8 10s ease-in-out infinite;
+      @keyframes shake8 {
+        0% {
+          transform: translate(0, 0);
+        }
+        20% {
+          transform: translate(2px, 2px);
+        }
+        40% {
+          transform: translate(-2px, -2px);
+        }
+        60% {
+          transform: translate(0, 2px);
+        }
+        80% {
+          transform: translate(2px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:nth-child(9) {
+      top: 218px;
+      left: 27%;
+      animation: shake9 10s ease-in-out infinite;
+      @keyframes shake9 {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(4px, -4px);
+        }
+        50% {
+          transform: translate(-4px, 4px);
+        }
+        75% {
+          transform: translate(2px, -2px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+    & > div:last-child {
+      top: 234px;
+      left: 52%;
+      animation: shake10 10s ease-in-out infinite;
+      @keyframes shake10 {
+        0% {
+          transform: translate(0, 0);
+        }
+        10% {
+          transform: translate(-2px, 0);
+        }
+        20% {
+          transform: translate(2px, 0);
+        }
+        30% {
+          transform: translate(-1px, 0);
+        }
+        40% {
+          transform: translate(1px, 0);
+        }
+        50% {
+          transform: translate(-2px, 0);
+        }
+        60% {
+          transform: translate(2px, 0);
+        }
+        70% {
+          transform: translate(-1px, 0);
+        }
+        80% {
+          transform: translate(1px, 0);
+        }
+        90% {
+          transform: translate(-2px, 0);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+}

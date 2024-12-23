@@ -1,0 +1,27 @@
+* {
+    &::-webkit-scrollbar {
+        width: 5px; /* Ширина скроллбара */
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background-color: white; /* Цвет ползунка */
+        border-radius: 6px; /* Скругление углов */
+      }
+      
+      &::-webkit-scrollbar-track {
+        background-color: black; /* Цвет дорожки */
+      }
+      
+      /* Для Firefox */
+      * {
+        scrollbar-width: thin; /* Тонкий скроллбар */
+        scrollbar-color: rgba(255, 255, 255, 0.5); /* Цвет ползунка и дорожки */
+      }
+}/* App.scss */
+
+
+main {
+  max-width: 2000px;
+  margin: auto;
+ 
+}

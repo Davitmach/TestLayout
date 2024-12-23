@@ -1,0 +1,228 @@
+
+header {
+    background-color: rgba(6, 5, 15, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 40px 100px;
+  position: relative;
+margin-bottom: 15vh;
+@media (max-width:632px) {
+    padding: 40px 50px;
+}
+
+    .Logo_box {
+        h1 {
+            color: rgba(255, 255, 255, 1);
+            font-weight: 300;
+            font-size: 32px;
+            letter-spacing: 2px;
+            transition: .4s;
+            cursor: pointer;
+            @media (max-width:454px) {
+                font-size: 25px;
+            }
+            &:hover {
+                text-shadow: 0 0 10px  white;
+            }
+        }
+    }
+    .Menu_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    
+        @media (max-width:1095px) {
+            position: fixed;
+            background-color: rgba(6, 5, 15, 1);
+         justify-content: flex-start;
+         align-items: start;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+          top: 0;
+        //   right: -90px;
+        left: 0;
+            padding: 30px;
+            z-index: 9999;
+        }
+        &>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          cursor: pointer;
+          transition:color .4s;
+          @media (max-width:1095px) {
+            flex-direction: row;
+            gap: 10px;
+         
+            border-radius: 8px;
+     
+       padding: 10px 20px;
+       justify-content: flex-start;
+       transition: .4s;
+       border: 1px solid transparent;
+       @media (hover:hover) {
+        &:hover {
+            border-color: white;
+            &>svg {
+               transform: translateX(10px);
+     
+            }
+           }
+       }
+     
+     svg  {
+        transition: .4s;
+       fill: cadetblue;
+     }
+    
+  
+
+          }
+      &:hover h2 {
+        color: white;
+      }
+            h1 {
+                color: white;
+                font-weight: 400;
+                font-size: 20px;
+                transition:color .4s;
+         
+              
+            }
+            h2 {
+                color: rgba(255, 255, 255, 0.5);
+                font-weight: 400;
+                font-size: 20px;
+                transition:color .4s;
+             
+
+            }
+        }
+        .Active {
+            h2 {
+                color: white;
+            }
+       
+            text-shadow: 0 0 10px  rgba(255, 255, 255, 0.438);
+        }
+       
+    }
+    .Menu_active {
+        @media (max-width:1095px) {
+        width: 100%;
+        
+        background-color: rgba(6, 5, 15, 1);
+        
+        animation:turnRight .7s ease-in-out forwards ;
+        @keyframes turnRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0%);
+            }
+        }
+        }
+    }
+    .Menu_disable {
+        @media (max-width:1095px) {
+        animation:turnLeft .7s ease-in-out forwards ;
+        background-color: rgba(6, 5, 15, 1);
+        width: 100%;
+       top: 0;
+       left: 0;
+       position: fixed;
+        @keyframes turnLeft {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    }}
+    .Btn {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 25px;
+        cursor: pointer;
+       visibility: hidden;
+       display: none;
+       z-index: 999999;
+       @media (max-width:1095px) {
+       display: flex;
+       visibility: visible;
+    }
+    }
+    .Btn_active {
+        position: fixed;
+        right: 30px;
+        top:60px;
+        animation: fadeIn .4s ease-in-out forwards;
+        z-index: 9999999;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    }
+}
+.HeaderActive {
+
+    z-index: 1000;
+    top: 0;
+    @media (max-width:1095px) {
+        position: sticky;
+        top: 0;
+    }
+    @media (min-width:1095px) {
+    animation: animHeader .6s .7s ease-in-out forwards;
+    @keyframes animHeader {
+        from {
+            transform: translateY(-100px);
+    
+        }
+        to {
+            transform: translateY(0);
+            position: sticky;
+       
+        }}
+    }
+
+}
+
+@keyframes shakeMenu {
+    0% {
+       
+        transform: translateY(20px);
+    }
+    50% {
+      
+        transform: translateY(-20px);
+    }
+    100% {
+       
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
