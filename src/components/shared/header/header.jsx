@@ -18,8 +18,10 @@ const [menuActive,setMenuActive] = useState(false);
 
 const HandleScroll = (page)=> {
 document.querySelector(page).scrollIntoView({
-    behavior:'smooth'
+    behavior:'smooth',
+    block: 'start',
 })
+
 console.log(page);
 
 }
@@ -71,7 +73,7 @@ else {
                 <div style={{animation:'shakeMenu .4s .2s ease-in-out forwards'}}
                     className={activeSection === 3 ? 'Active' : ''} 
                     onClick={() => {handleActive(3)
-                        HandleScroll()
+                        HandleScroll('#Contact')
 
                     }}
                 >

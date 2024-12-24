@@ -1,0 +1,238 @@
+.Contact_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 100px;
+     gap: 70px;
+    @media (min-width:545px ) and (max-width:1236px) {
+        padding: 50px 10px ;
+         }
+         @media (max-width:544px) {
+             padding: 50px 10px ;
+           }
+    .Options_box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+        .Title_box {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            &:has(:hover) {
+                h1 {
+                  color: rgba(255, 255, 255, 0.3);
+                }
+                h2 {
+                  color: white;
+                }
+              }
+            h1 {
+                color: rgba(255, 255, 255, 1);
+                font-size: 50px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: .4s;
+            }
+            h2 {
+                color: rgba(255, 255, 255, 0.3);
+                font-size: 50px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: .4s;
+            }
+        }
+        .Options {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            &>div {
+                cursor: pointer;
+                width: 100%;
+                border-radius: 20px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                transition: .4s;
+                padding: 25px 30px;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                &:hover {
+                    border-color: rgba(251, 228, 255, 1);
+                }
+                .Title {
+                    font-size: 35px;
+                    font-weight: 400;
+                }
+                .Purple {
+                    color: rgba(205, 165, 213, 1);
+                    font-size: 26px;
+                    font-weight: 400;
+                }
+                .White {
+                    font-size: 26px;
+                    font-weight: 500;
+                }
+            }
+            .Active {
+                border-color: rgba(251, 228, 255, 1);
+                box-shadow: 0 0 10px rgba(251, 228, 255, 1) ;
+            }
+        }
+        .Mail {
+            border-radius: 20px;
+            padding: 20px 30px;
+            background-color: rgba(205, 165, 213, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            span {
+                color: rgba(6, 5, 15, 1);
+                font-weight: 400;
+                font-size: 26px;
+                
+                @media (max-width:714px) {
+                    font-size: 20px;
+                }
+                @media (max-width:552px) {
+                    font-size: 17px;
+                    font-weight: 500;
+                }
+                b {
+                    color: rgba(6, 5, 15, 1);
+
+                }
+            }
+        }
+    }
+    .Mail_box {
+        width: 100%;
+        background-color: rgba(205, 165, 213, 1);
+        border-radius: 80px;
+        padding: 31px 80px;
+        display: flex;
+        align-items: start;
+        justify-content:space-between;
+        gap: 50px;
+        transition: .4s;
+        @media (max-width:885px) {
+            flex-direction: column;
+        }
+        @media (max-width:661px) {
+         padding: 31px 20px;
+         border-radius: 40px;
+         }
+    &>div {
+        flex: 1 1 ;
+        @media (max-width:885px) {
+           width: 100%;
+        }
+    }
+
+.Info_box {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    .Title_box {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        h1 {
+            color:  rgba(6, 5, 15, 0.4);
+            font-weight: 400;
+            font-size: 50px;
+        }
+        span {
+            color: rgba(6, 5, 15, 1);
+            font-size: 26px;
+            font-weight: 400;
+        }
+    }
+    .Description_box {
+        max-width: 500px;
+        width: 100%;
+        p {
+            width: 100%;
+            color: rgba(6, 5, 15, 1);
+            font-weight: 400;
+            font-size: 26px;
+        }
+    }
+}
+    .Form_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            input {
+                width: 100%;
+                background: transparent;
+                border-radius: 20px;
+                border: 1px solid rgba(6, 5, 15, 0.3);
+                outline: none;
+                color: rgba(6, 5, 15, 1);
+                padding: 0px 18px ;
+           position: relative;
+                height:60px;
+                transition: .4s;
+                &:focus {
+                    border-color: rgba(251, 228, 255, 1);
+                    box-shadow: 0 0 10px rgba(251, 228, 255, 1) ;
+                    &::placeholder {
+                        color: rgba(251, 228, 255, 1);
+                    }
+                }
+                &::placeholder {
+                    position: absolute;
+                top: 20px;
+                left: 20px;
+                color: rgba(6, 5, 15, 0.4);
+                font-size: 14px;
+                font-weight: 600;
+transition: .4s;
+                }
+            }
+            button {
+                width: 100%;
+                background-color: rgba(232, 254, 116, 1);
+                border-radius: 20px;
+                height: 65px;
+                margin-top: 30px;
+                border: none;
+                outline: none;
+                color: rgba(6, 5, 15, 1);
+                font-size: 26px;
+                font-weight: 500;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+        }
+    }
+    }
+}
