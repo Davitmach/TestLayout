@@ -19,7 +19,10 @@ export default function About() {
       setActiveSection(1);  
     }
   }, [inView]);  
+const HandleAddClass=(e)=> {
+console.log(e.target.classList.add('Active'));
 
+}
   return (
     <div id='About' className='About_box' ref={ref}>
     <div className='Info_box'>
@@ -35,16 +38,16 @@ export default function About() {
       </div>
     </div>
     <div className="Btn_container">
-      <div>бэкенд</div>
-      <div>mob app</div>
-      <div>AI интеграции</div>
-      <div>разработка</div>
-      <div>дизайн</div>
-      <div>чат-бот</div>
-      <div>перфоманс</div>
-      <div>фронтенд</div>
-      <div>аналитика</div>
-      <div>менеджмент</div>
+      <div onClick={HandleAddClass}>бэкенд</div>
+      <div onClick={HandleAddClass}>mob app</div>
+      <div onClick={HandleAddClass}>AI интеграции</div>
+      <div onClick={HandleAddClass}>разработка</div>
+      <div onClick={HandleAddClass}>дизайн</div>
+      <div onClick={HandleAddClass}>чат-бот</div>
+      <div onClick={HandleAddClass}>перфоманс</div>
+      <div onClick={HandleAddClass}>фронтенд</div>
+      <div onClick={HandleAddClass}>аналитика</div>
+      <div onClick={HandleAddClass}>менеджмент</div>
     </div>
   </div>
 
