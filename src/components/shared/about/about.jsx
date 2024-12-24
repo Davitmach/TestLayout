@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export default function About() {
-  // Настройка IntersectionObserver
+
   const { ref, inView } = useInView({
-    threshold: 0.1,  // Устанавливаем порог для видимости
+    threshold: 0.9,  // Устанавливаем порог для видимости
   });
 
   const { activeSection, setActiveSection } = useStore();
@@ -14,12 +14,14 @@ export default function About() {
   useEffect(() => {
     
     if (inView) {
+      console.log('about');
+      
       setActiveSection(1);  
     }
-  }, [inView, setActiveSection]);  
+  }, [inView]);  
 
   return (
-    <div className='About_box' ref={ref}>
+    <div id='About' className='About_box' ref={ref}>
     <div className='Info_box'>
       <div className='Title_box'>
         <h1>О нашей команде</h1>

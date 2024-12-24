@@ -1,61 +1,77 @@
-import { useRef ,useState} from "react";
+import { useRef ,useState,useEffect} from "react";
 import "./service.scss";
+import useStore from "../../../store";
+import { useInView } from 'react-intersection-observer';
+import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faCaretLeft, faCaretRight} from '@fortawesome/free-solid-svg-icons'; 
 
 export default function Service() {
-  const ref = useRef();
-  const [move, setMove] = useState(0); // Храним текущее смещение
+  
+  const { ref, inView } = useInView({
+    threshold: 0.9,  // Устанавливаем порог для видимости
+  });
+
+  const { activeSection, setActiveSection } = useStore();
+
+  useEffect(() => {
+    
+    if (inView) {
+      console.log('qaq');
+      
+      setActiveSection(2);  
+    }
+  }, [inView, setActiveSection]);  
+  const [move, setMove] = useState(0);
   let animationFrameId = useRef(null);
 
-  // Функция для обработки движения
+  
   const HandleMove = (event) => {
     if (animationFrameId.current) {
-      cancelAnimationFrame(animationFrameId.current); // Останавливаем предыдущее обновление
+      cancelAnimationFrame(animationFrameId.current); 
     }
 
     animationFrameId.current = requestAnimationFrame(() => {
-      const wrapper = ref.current;
+      const wrapper = document.getElementById('Wrapper');
       if (!wrapper) return;
 
-      // Получаем позицию мыши относительно окна
+     
       const mouseX = event.clientX;
 
-      // Получаем размер элемента Wrapper
+      
       const wrapperWidth = wrapper.offsetWidth;
 
-      // Получаем позицию левого края элемента относительно окна
+      
       const wrapperLeft = wrapper.getBoundingClientRect().left;
 
-      // Рассчитываем смещение от центра Wrapper
+      
       const offsetX = mouseX - wrapperLeft - wrapperWidth / 2;
 
-      // Ограничиваем смещение в пределах -271px и 271px
+     
       const maxMove = 271;
       const minMove = -271;
 
-      const newMove = Math.max(Math.min(offsetX, maxMove), minMove); // Ограничиваем диапазон
+      const newMove = Math.max(Math.min(offsetX, maxMove), minMove); 
 
-      // Обновляем смещение
+     
       setMove(newMove);
     });
   };
 
-  // Применяем трансформацию с плавностью через CSS
   const style = {
     transform: `translateX(${move}px)`,
-    transition: "transform 0.1s ease-out", // Плавное движение
+    transition: "transform 0.1s ease-out", 
   };
 
   return (
     <>
-      <div className="Service_box">
+      <div id="Service" className="Service_box" ref={ref}>
         <div className="Info_box">
           <h1>Наши услуги за ваши деньги</h1>
           <span>деньги, кстати, небольшие</span>
         </div>
         <div className="Swipper">
           <div onMouseMove={HandleMove}
-            onTouchMove={HandleMove} 
-            onTouchStart={HandleMove}  ref={ref} className="Wrapper" style={style}>
+            id="Wrapper" className="Wrapper" style={style}>
             <div>
               <div className="Title_box">
                 <h1>Создание сайтов</h1>
@@ -102,7 +118,7 @@ export default function Service() {
               </div>
               <div>
                 <p>
-                   Мы разрабатываем нативные и кроссплатформенные  мобильные
+                   Мы разрабатываем нативные и кроссплатформенные мобильные
                   приложения для iOS и Android.  Наши решения обеспечивают
                   высокую производительность,  удобство в использовании и
                   стабильную работу на различных устройствах.
@@ -127,6 +143,7 @@ export default function Service() {
             </div>
           </div>
         </div>
+       
       </div>
     </>
   );

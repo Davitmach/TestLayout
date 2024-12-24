@@ -16,13 +16,17 @@ const [menuActive,setMenuActive] = useState(false);
         
     };
 
-const HandleScroll = ()=> {
+const HandleScroll = (page)=> {
+document.querySelector(page).scrollIntoView({
+    behavior:'smooth'
+})
+console.log(page);
 
 }
     useEffect(() => {
         const handleScroll = () => {
             
-            if (window.scrollY > 509) {
+            if (window.scrollY > 209) {
                 setHeader(true);
             } else {
                 setHeader(false);
@@ -52,7 +56,7 @@ else {
                 <div style={{animation:'shakeMenu .4s ease-in-out forwards'}}
                     className={activeSection === 1 ? 'Active' : ''} 
                     onClick={() => {handleActive(1)
-                        HandleScroll()}
+                        HandleScroll('#About')}
                     }
                 >
                     <div><h1>О команде</h1></div>
@@ -62,7 +66,7 @@ else {
                 <div style={{animation:'shakeMenu .4s .1s ease-in-out forwards'}}
                     className={activeSection === 2 ? 'Active' : ''} 
                     onClick={() => {handleActive(2) 
-                        HandleScroll()}}
+                        HandleScroll('#Service')}}
                 >
                     <div><h1>Услуги</h1></div>
                     <div><h2>что умеем?</h2></div>  {menuActive && <FontAwesomeIcon icon={faCaretRight}/>}

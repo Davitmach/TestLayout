@@ -187,7 +187,7 @@ margin-bottom: 15vh;
         top: 0;
     }
     @media (min-width:1095px) {
-    animation: animHeader .6s .7s ease-in-out forwards;
+    animation: animHeader .6s  ease-in-out forwards;
     @keyframes animHeader {
         from {
             transform: translateY(-100px);
