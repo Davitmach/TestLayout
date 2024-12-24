@@ -36,9 +36,10 @@
         overflow: hidden;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         @media (hover:none) {
             overflow-x: scroll;
+            justify-content: flex-start;
         }
         .Wrapper {
             display: flex;

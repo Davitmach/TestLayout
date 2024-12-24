@@ -39,10 +39,7 @@ console.log(page);
 useEffect(()=> {
 if(menuActive == true) {
 document.body.style.overflow = 'hidden' 
-window.scrollTo({
-    top:0,
-    behavior:'smooth'
-})
+
 }
 else {
     document.body.style.overflow = 'auto' 
