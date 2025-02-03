@@ -14,13 +14,13 @@ export default function About() {
   useEffect(() => {
     
     if (inView) {
-      console.log('about');
+      
       
       setActiveSection(1);  
     }
   }, [inView]);  
 const HandleAddClass=(e)=> {
-console.log(e.target.classList.add('Active'));
+
 
 }
   return (

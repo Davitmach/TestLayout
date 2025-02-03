@@ -1,9 +1,10 @@
 .About_box {
-  width: 100%;
+ max-width: 1240px;
+ margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 100px;
+  padding: 50px 30px;
   overflow: hidden;
   @media (min-width: 545px) and (max-width: 1236px) {
     padding: 50px 20px;
@@ -11,13 +12,14 @@
   @media (max-width: 544px) {
     padding: 50px 20px;
   }
-  @media (max-width: 1465px) {
+  @media (max-width: 859px) {
     flex-direction: column;
     gap: 50px;
 
 
   }
   .Info_box {
+    // width: 100%;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -43,6 +45,9 @@
         font-size: 50px;
         cursor: pointer;
         transition: 0.4s;
+        @media (max-width:1111px) {
+         font-size: 30px;
+        }
       }
       h2 {
         color: rgba(255, 255, 255, 1);
@@ -50,6 +55,9 @@
         font-size: 50px;
         cursor: pointer;
         transition: 0.4s;
+        @media (max-width:1111px) {
+          font-size: 30px;
+         }
       }
     }
     .Description_box {
@@ -58,34 +66,33 @@
   
       p {
         font-weight: 400;
-        font-size: 26px;
+        font-size: 18px;
+        @media (max-width:1111px) {
+          font-size: 16px;
+         }
       }
     }
   }
   .Btn_container {
     position: relative;
-    max-width: 900px;
     height: 345px;
-    width: 100%;
  
-    @media (max-width:1558px) {
-        max-width: 800px;
+    @media (min-width:859px) {
+      flex: 1 1;
     }
-    @media (max-width: 773px) {
-   width: 1000px ;
+ 
+ 
+    @media (max-width: 1202px) {
+   width:600px ;
     
     
       }
-      @media (max-width: 491px) {
-        width: 670px ;
+      @media (max-width: 663px) {
+        width:100% ;
          
          
            }
-           @media (max-width: 343px) {
-            width: 600px ;
-             
-             
-               }
+    
     & > * {
       position: absolute;
     }
@@ -102,13 +109,13 @@
       padding: 15px 20px;
       cursor: pointer;
       transition: 0.4s;
-      @media (max-width: 491px) {
-      padding: 10px 15px;
+      @media (max-width: 950px) {
+      padding: 15px 20px;
          
            }
-           @media (max-width: 343px) {
-          padding: 5px 10px;
-          font-size: 14px;
+           @media (max-width: 453px) {
+          padding: 10px 15px;
+          font-size: 12px;
              
              
                }
@@ -208,7 +215,16 @@
     }
     & > div:nth-child(3) {
       top: 60px;
-      left: 20%;
+      left: 16%;
+      @media (max-width:1169px) {
+        left: 10%;
+      }
+      @media (max-width:1111px) {
+        left:5%
+      }
+      @media (max-width:900px) {
+        left:0%
+      }
       animation: shake3 10s ease-in-out infinite;
       @keyframes shake3 {
         0% {
@@ -240,6 +256,9 @@
     & > div:nth-child(4) {
       top: 80px;
       left: 40%;
+      @media (max-width:900px) {
+        left:37%
+      }
       animation: shake4 10s ease-in-out infinite;
       @keyframes shake4 {
         0% {
@@ -264,7 +283,13 @@
     }
     & > div:nth-child(5) {
       top: 70px;
-      left: 60%;
+      left: 64%;
+      @media (max-width:1202px) {
+        left: 65%;
+      }
+      @media (max-width:1111px) {
+        left: 70%
+      }
       animation: shake5 10s ease-in-out infinite;
       @keyframes shake5 {
         0% {
@@ -287,6 +312,12 @@
     & > div:nth-child(6) {
       top: 135px;
       left: 23%;
+      @media (max-width:1111px) {
+        left:15%
+      }
+      @media (max-width:900px) {
+        left:10%
+      }
       animation: shake6 10s ease-in-out infinite;
       @keyframes shake6 {
         0% {
@@ -327,6 +358,13 @@
     & > div:nth-child(7) {
       top: 165px;
       left: 43%;
+      @media (max-width:1111px) {
+        left:40%;
+        top: 155px;
+      }
+      @media (max-width:900px) {
+        left:35%
+      }
       animation: shake7 10s ease-in-out infinite;
       @keyframes shake7 {
         0% {
@@ -351,7 +389,13 @@
     }
     & > div:nth-child(8) {
       top: 150px;
-      left: 63%;
+      left: 65%;
+      @media (max-width:1202px) {
+        left: 67%;
+      }
+      @media (max-width:1111px) {
+        left: 70%
+      }
       animation: shake8 10s ease-in-out infinite;
       @keyframes shake8 {
         0% {
@@ -377,6 +421,12 @@
     & > div:nth-child(9) {
       top: 218px;
       left: 27%;
+      @media (max-width:1111px) {
+        left:24%
+      }
+      @media (max-width:900px) {
+        left:17%
+      }
       animation: shake9 10s ease-in-out infinite;
       @keyframes shake9 {
         0% {

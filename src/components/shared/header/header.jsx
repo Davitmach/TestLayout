@@ -21,9 +21,6 @@ document.querySelector(page).scrollIntoView({
     behavior:'smooth',
     block: 'start',
 })
-
-console.log(page);
-
 }
     useEffect(() => {
         const handleScroll = () => {

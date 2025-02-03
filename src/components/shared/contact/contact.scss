@@ -1,17 +1,18 @@
 .Contact_box {
-    width: 100%;
+    max-width: 1240px;
+    margin: auto;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 50px 100px;
+    padding: 50px 30px;
      gap: 70px;
     @media (min-width:545px ) and (max-width:1236px) {
-        padding: 50px 10px ;
+        padding: 50px 30px ;
          }
          @media (max-width:544px) {
-             padding: 50px 10px ;
+             padding: 50px 30px ;
            }
     .Options_box {
         width: 100%;
@@ -60,6 +61,7 @@
             gap: 10px;
             &>div {
                 cursor: pointer;
+   
                 width: 100%;
                 border-radius: 20px;
                 border: 2px solid rgba(255, 255, 255, 0.3);
@@ -67,8 +69,9 @@
                 padding: 25px 30px;
                 display: flex;
                 align-items: start;
-                justify-content: center;
-                flex-direction: column;
+                justify-content:space-between;
+transition: .4s;
+                
                 gap: 10px;
                 &:hover {
                     border-color: rgba(251, 228, 255, 1);
@@ -90,6 +93,8 @@
             .Active {
                 border-color: rgba(251, 228, 255, 1);
                 box-shadow: 0 0 10px rgba(251, 228, 255, 1) ;
+                height: auto;
+                transition: .4s;
             }
         }
         .Mail {
@@ -100,6 +105,16 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            cursor: pointer;
+            transition: .4s;
+            &:hover {
+                background: rgba(194, 156, 201, 1);
+
+            }
+            &:active {
+                background: rgba(182, 146, 189, 1);
+
+            }
             span {
                 color: rgba(6, 5, 15, 1);
                 font-weight: 400;
@@ -231,6 +246,70 @@ transition: .4s;
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
+                transition: .4s;
+                &:hover {
+                    color: rgba(6, 5, 15, 1);
+                    background: rgba(221, 242, 111, 1);
+
+                }
+                &:active {
+                    background: rgba(210, 229, 105, 1);
+color: rgba(6, 5, 15, 1);
+
+                }
+            }
+            .disabled {
+                background: rgba(232, 254, 116, 1) !important;
+color: rgba(6, 5, 15, 1) !important;
+opacity: 0.5;
+cursor:not-allowed;
+            }
+            .checkbox {
+                width: 100%;
+                display:flex;
+                 justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                .custom-checkbox {
+                    display: inline-flex;
+                    align-items: center;
+                    cursor: pointer;
+                    input {
+                        display: none;
+                    }
+                    span {
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid rgba(6, 5, 15, 0.3);
+                        border-radius:10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: background 0.3s ease;
+                    }
+                  }
+                
+                  .custom-checkbox svg {
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                  }
+                
+                  .custom-checkbox input:checked + span svg {
+                    opacity: 1;
+                  }
+                p {
+                    color: rgba(6, 5, 15, 0.3);
+font-size: 14px;
+span {
+    color: rgba(6, 5, 15, 0.3);//styleName: Description, caption;
+cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+}
+                }
             }
         }
     }

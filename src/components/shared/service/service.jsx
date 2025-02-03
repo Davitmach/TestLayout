@@ -15,9 +15,7 @@ export default function Service() {
 
   useEffect(() => {
     
-    if (inView) {
-      console.log('qaq');
-      
+    if (inView) {      
       setActiveSection(2);  
     }
   }, [inView, setActiveSection]);  
@@ -57,10 +55,10 @@ export default function Service() {
     });
   };
 
-  const style = {
-    transform: `translateX(${move}px)`,
-    transition: "transform 0.1s ease-out", 
-  };
+  // const style = {
+  //   transform: `translateX(${move}px)`,
+  //   transition: "transform 0.1s ease-out", 
+  // };
 
   return (
     <>
@@ -70,8 +68,7 @@ export default function Service() {
           <span>деньги, кстати, небольшие</span>
         </div>
         <div className="Swipper">
-          <div onMouseMove={HandleMove}
-            id="Wrapper" className="Wrapper" style={style}>
+      
             <div>
               <div className="Title_box">
                 <h1>Создание сайтов</h1>
@@ -142,7 +139,7 @@ export default function Service() {
               </div>
             </div>
           </div>
-        </div>
+       
        
       </div>
     </>
