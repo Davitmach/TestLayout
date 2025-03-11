@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import './header.scss';
 import useStore from '../../../store';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars ,faXmark,faCaretRight} from '@fortawesome/free-solid-svg-icons'; 
 
 
 export default function Header() {
@@ -21,6 +19,7 @@ document.querySelector(page).scrollIntoView({
     behavior:'smooth',
     block: 'start',
 })
+setMenuActive(false)
 }
     useEffect(() => {
         const handleScroll = () => {
