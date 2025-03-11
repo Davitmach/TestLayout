@@ -11,7 +11,7 @@ const HandleChange = (state)=> {
   return (
     <>
    
-      <div id="Service" className="Projects_box" >
+      <div id="Comand" className="Projects_box" >
       <div>
         <div className="Top_block">
           <div className="Left_block">

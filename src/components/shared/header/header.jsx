@@ -51,9 +51,9 @@ else {
             <div className="Logo_box" style={{animation:'fadeInLogo .4s ease-in-out forwards'}}><h1>Айти Перфоманс</h1></div>
             <div className={`Menu_box ${menuActive ? 'Menu_active' : 'Menu_disable'}`}>
         <div><h1>Стать клиентом</h1></div>
-        <div><h2>О команде</h2><span>кто мы?</span></div>
-        <div><h2>Услуги</h2><span>что умеем?</span></div>
-        <div><h2>Контакты</h2><span>поговорим?</span></div>
+        <div onClick={()=> HandleScroll('#Comand')}><h2>О команде</h2><span>кто мы?</span></div>
+        <div onClick={()=> HandleScroll('#Service')}><h2>Услуги</h2><span>что умеем?</span></div>
+        <div onClick={()=> HandleScroll('#Contact')}><h2>Контакты</h2><span>поговорим?</span></div>
             </div>
 
             <div className='to_be_client'><h1>Стать клиентом</h1></div>
@@ -65,7 +65,7 @@ else {
 <path d="M5 17.5H30V16.5H5V17.5Z" fill="#021800"/>
 </svg>
 
-            {/* <FontAwesomeIcon    icon={menuActive ? faXmark : faBars}/> */}
+        
         </header>
     );
 }
