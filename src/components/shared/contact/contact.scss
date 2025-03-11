@@ -1,19 +1,40 @@
 .Contact_box {
-    max-width: 1240px;
+    width: 100%;
     margin: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 50px 30px;
-     gap: 70px;
-    @media (min-width:545px ) and (max-width:1236px) {
-        padding: 50px 30px ;
-         }
-         @media (max-width:544px) {
-             padding: 50px 30px ;
-           }
+
+     background-color: #FFFFF1;
+     &>div {
+        width: 100%;    
+        max-width: 1920px;
+    margin: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      
+         gap: 70px;
+         padding: 120px 180px 0;
+         @media (max-width:1440px) {
+            padding: 135px 90px 50px;
+            gap: 45px;
+        }
+        @media (max-width:1280px) {
+            padding: 97px 45px 50px;
+            gap: 26px;
+        }
+        @media (max-width:768px) {
+            padding: 120px 30px 50px;
+            gap: 33px;
+        }
+        @media (max-width:512px) {
+            padding: 113px 10px 50px;
+            gap: 33px;
+        }
+        @media (max-width:320px) {
+            padding: 120px 10px 20px;
+            gap: 33px;
+        }
     .Options_box {
         width: 100%;
         height: auto;
@@ -28,27 +49,28 @@
             align-items: start;
             justify-content: center;
             flex-direction: column;
-            &:has(:hover) {
-                h1 {
-                  color: rgba(255, 255, 255, 0.3);
-                }
-                h2 {
-                  color: white;
-                }
-              }
+           gap: 10px;
             h1 {
-                color: rgba(255, 255, 255, 1);
-                font-size: 50px;
+                font-family: Tektur;
+                color: #0C2200;
+                font-size: 36px;
                 font-weight: 400;
                 cursor: pointer;
                 transition: .4s;
+                @media (max-width:512px) {
+                    font-size: 32px;
+                }
             }
             h2 {
-                color: rgba(255, 255, 255, 0.3);
-                font-size: 50px;
+                font-family: Tektur;
+                color: #0C220033;
+                font-size: 32px;
                 font-weight: 400;
                 cursor: pointer;
                 transition: .4s;
+                @media (max-width:512px) {
+                    font-size: 28px;
+                }
             }
         }
         .Options {
@@ -63,25 +85,36 @@
                 cursor: pointer;
    
                 width: 100%;
-                border-radius: 20px;
-                border: 2px solid rgba(255, 255, 255, 0.3);
+                border-radius: 50px;
+                border: 1px solid #0C220033;
                 transition: .4s;
                 padding: 25px 30px;
                 display: flex;
-                align-items: start;
+                align-items:center;
                 justify-content:space-between;
 transition: .4s;
                 
                 gap: 10px;
-                &:hover {
-                    border-color: rgba(251, 228, 255, 1);
+                @media (max-width:512px) {
+                    padding: 25px 10px;
+                    border-radius: 40px;
                 }
+             
                 .Title {
                     font-size: 35px;
                     font-weight: 400;
+                    @media (max-width:1024px) {
+                        font-size: 24px;
+                    }
+                    @media (max-width:512px) {
+                        font-size: 18px;
+                    }
+                    @media (max-width:320px) {
+                        font-size: 16px;
+                    }
                 }
                 .Purple {
-                    color: rgba(205, 165, 213, 1);
+                    color: #0C2200;
                     font-size: 26px;
                     font-weight: 400;
                 }
@@ -91,227 +124,31 @@ transition: .4s;
                 }
             }
             .Active {
-                border-color: rgba(251, 228, 255, 1);
-                box-shadow: 0 0 10px rgba(251, 228, 255, 1) ;
+              
                 height: auto;
                 transition: .4s;
             }
         }
-        .Mail {
-            border-radius: 20px;
-            padding: 20px 30px;
-            background-color: rgba(205, 165, 213, 1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            cursor: pointer;
-            transition: .4s;
-            &:hover {
-                background: rgba(194, 156, 201, 1);
-
-            }
-            &:active {
-                background: rgba(182, 146, 189, 1);
-
-            }
-            span {
-                color: rgba(6, 5, 15, 1);
-                font-weight: 400;
-                font-size: 26px;
-                
-                @media (max-width:714px) {
-                    font-size: 20px;
-                }
-                @media (max-width:552px) {
-                    font-size: 17px;
-                    font-weight: 500;
-                }
-                b {
-                    color: rgba(6, 5, 15, 1);
-
-                }
-            }
-        }
-    }
-    .Mail_box {
-        width: 100%;
-        background-color: rgba(205, 165, 213, 1);
-        border-radius: 80px;
-        padding: 31px 80px;
-        display: flex;
-        align-items: start;
-        justify-content:space-between;
-        gap: 50px;
-        transition: .4s;
-        @media (max-width:885px) {
-            flex-direction: column;
-        }
-        @media (max-width:661px) {
-         padding: 31px 20px;
-         border-radius: 40px;
-         }
-    &>div {
-        flex: 1 1 ;
-        @media (max-width:885px) {
-           width: 100%;
-        }
-    }
-
-.Info_box {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-    .Title_box {
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        flex-direction: column;
-        h1 {
-            color:  rgba(6, 5, 15, 0.4);
+        .Btn {
+            color: #FC739F;
+            font-family: Tektur; 
             font-weight: 400;
-            font-size: 50px;
+             font-size: 35px;
+             cursor: pointer;
+             @media (max-width:1024px) {
+                font-size: 28px;
+             }
+             @media (max-width:320px) {
+                font-size: 22px;
+             }
+             &:hover {
+                color: #DE5581;
+             }
+             &:active {
+                color: #CA416D;
+             }
         }
-        span {
-            color: rgba(6, 5, 15, 1);
-            font-size: 26px;
-            font-weight: 400;
-        }
-    }
-    .Description_box {
-        max-width: 500px;
-        width: 100%;
-        p {
-            width: 100%;
-            color: rgba(6, 5, 15, 1);
-            font-weight: 400;
-            font-size: 26px;
-        }
+      
     }
 }
-    .Form_box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        form {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 10px;
-            input {
-                width: 100%;
-                background: transparent;
-                border-radius: 20px;
-                border: 1px solid rgba(6, 5, 15, 0.3);
-                outline: none;
-                color: rgba(6, 5, 15, 1);
-                padding: 0px 18px ;
-           position: relative;
-                height:60px;
-                transition: .4s;
-                &:focus {
-                    border-color: rgba(251, 228, 255, 1);
-                    box-shadow: 0 0 10px rgba(251, 228, 255, 1) ;
-                    &::placeholder {
-                        color: rgba(251, 228, 255, 1);
-                    }
-                }
-                &::placeholder {
-                    position: absolute;
-                top: 20px;
-                left: 20px;
-                color: rgba(6, 5, 15, 0.4);
-                font-size: 14px;
-                font-weight: 600;
-transition: .4s;
-                }
-            }
-            button {
-                width: 100%;
-                background-color: rgba(232, 254, 116, 1);
-                border-radius: 20px;
-                height: 65px;
-                margin-top: 30px;
-                border: none;
-                outline: none;
-                color: rgba(6, 5, 15, 1);
-                font-size: 26px;
-                font-weight: 500;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                transition: .4s;
-                &:hover {
-                    color: rgba(6, 5, 15, 1);
-                    background: rgba(221, 242, 111, 1);
-
-                }
-                &:active {
-                    background: rgba(210, 229, 105, 1);
-color: rgba(6, 5, 15, 1);
-
-                }
-            }
-            .disabled {
-                background: rgba(232, 254, 116, 1) !important;
-color: rgba(6, 5, 15, 1) !important;
-opacity: 0.5;
-cursor:not-allowed;
-            }
-            .checkbox {
-                width: 100%;
-                display:flex;
-                 justify-content: flex-start;
-                align-items: center;
-                gap: 10px;
-                .custom-checkbox {
-                    display: inline-flex;
-                    align-items: center;
-                    cursor: pointer;
-                    input {
-                        display: none;
-                    }
-                    span {
-                        width: 30px;
-                        height: 30px;
-                        border: 1px solid rgba(6, 5, 15, 0.3);
-                        border-radius:10px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        transition: background 0.3s ease;
-                    }
-                  }
-                
-                  .custom-checkbox svg {
-                    opacity: 0;
-                    transition: opacity 0.3s ease;
-                  }
-                
-                  .custom-checkbox input:checked + span svg {
-                    opacity: 1;
-                  }
-                p {
-                    color: rgba(6, 5, 15, 0.3);
-font-size: 14px;
-span {
-    color: rgba(6, 5, 15, 0.3);//styleName: Description, caption;
-cursor: pointer;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    
-}
-                }
-            }
-        }
-    }
-    }
 }

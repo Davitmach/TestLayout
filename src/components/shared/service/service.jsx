@@ -1,147 +1,84 @@
 import { useRef ,useState,useEffect} from "react";
 import "./service.scss";
-import useStore from "../../../store";
-import { useInView } from 'react-intersection-observer';
-import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCaretLeft, faCaretRight} from '@fortawesome/free-solid-svg-icons'; 
 
 export default function Service() {
+  const [active,setActive] = useState('сайт');
+  const HandleChange = (state)=> {
+    setActive(state)
+  }
+ 
   
-  const { ref, inView } = useInView({
-    threshold: 0.9,  // Устанавливаем порог для видимости
-  });
 
-  const { activeSection, setActiveSection } = useStore();
-
-  useEffect(() => {
-    
-    if (inView) {      
-      setActiveSection(2);  
-    }
-  }, [inView, setActiveSection]);  
-  const [move, setMove] = useState(0);
-  let animationFrameId = useRef(null);
-
-  
-  const HandleMove = (event) => {
-    if (animationFrameId.current) {
-      cancelAnimationFrame(animationFrameId.current); 
-    }
-
-    animationFrameId.current = requestAnimationFrame(() => {
-      const wrapper = document.getElementById('Wrapper');
-      if (!wrapper) return;
-
-     
-      const mouseX = event.clientX;
-
-      
-      const wrapperWidth = wrapper.offsetWidth;
-
-      
-      const wrapperLeft = wrapper.getBoundingClientRect().left;
-
-      
-      const offsetX = mouseX - wrapperLeft - wrapperWidth / 2;
-
-     
-      const maxMove = 271;
-      const minMove = -271;
-
-      const newMove = Math.max(Math.min(offsetX, maxMove), minMove); 
-
-     
-      setMove(newMove);
-    });
-  };
-
-  // const style = {
-  //   transform: `translateX(${move}px)`,
-  //   transition: "transform 0.1s ease-out", 
-  // };
 
   return (
     <>
-      <div id="Service" className="Service_box" ref={ref}>
-        <div className="Info_box">
-          <h1>Наши услуги за ваши деньги</h1>
-          <span>деньги, кстати, небольшие</span>
-        </div>
-        <div className="Swipper">
-      
-            <div>
-              <div className="Title_box">
-                <h1>Создание сайтов</h1>
-              </div>
-              <div>
-                <p>
-                  Мы сайты любой сложности от лендингов до многостраничных
-                  корпоративных порталов. Обеспечиваем современный, адаптивный
-                  дизайн, высокую скорость загрузки и удобную навигацию.
-                  Включаем интеграции с платежными системами, CRM и другими
-                  сервисами для улучшения работы бизнеса.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="Title_box">
-                <h1>Разработка ботов</h1>
-              </div>
-              <div>
-                <p>
-                  Мы создаем чат-ботов для автоматизации общения с клиентами
-                  Боты могут обрабатывать запросы, помогать с бронированием,
-                  собирать информацию и интегрироваться с CRM-системами, улучшая
-                  эффективность бизнеса и снижая нагрузку на сотрудников. 
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="Title_box">
-                <h1>Веб-дизайн</h1>
-              </div>
-              <div>
-                <p>
-                  Мы разрабатываем уникальные, привлекательные и функциональные
-                  дизайны для сайтов и приложений. Создаем стильные макеты,
-                  ориентированные на удобство пользователя, учитывая все
-                  требования бренда и современные тренды в дизайне. 
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="Title_box">
-                <h1>Mobile App</h1>
-              </div>
-              <div>
-                <p>
-                   Мы разрабатываем нативные и кроссплатформенные мобильные
-                  приложения для iOS и Android.  Наши решения обеспечивают
-                  высокую производительность,  удобство в использовании и
-                  стабильную работу на различных устройствах.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="Title_box">
-                <h1>Интеграция ИИ</h1>
-              </div>
-              <div>
-                <p>
-                  Мы помогаем компаниям внедрять решения на базе искусственного
-                  интеллекта, которые автоматизируют процессы, повышают
-                  эффективность и предоставляют новые возможности для анализа
-                  данных. Интеграция ИИ может включать в себя внедрение
-                  машинного обучения, обработки естественного языка (NLP),
-                  прогнозной аналитики, распознавания изображений и многого
-                  другого, в зависимости от потребностей бизнеса.
-                </p>
-              </div>
-            </div>
+      <div id="Service" className="Service_box" >
+     <div>
+<div className="Info_box">
+  <div><h1>Наши услуги за ваши деньги</h1></div>
+  <div><h2>И деньги, кстати, небольшие</h2></div>
+</div>
+<div className="About">
+<div className="Types">
+            <div onClick={()=>HandleChange('сайт')} className={active == 'сайт' && 'Active'}>Создание сайтов</div>
+            <div onClick={()=>HandleChange('раз')} className={active == 'раз' && 'Active'}>Разработка ботов</div>
+            <div onClick={()=>HandleChange('веб')} className={active == 'веб' && 'Active'}>Веб-дизайн</div>
+            <div onClick={()=>HandleChange('ии')} className={active == 'ии' && 'Active'}>Интеграция ИИ</div>
+            <div onClick={()=>HandleChange('моб')} className={active == 'моб' && 'Active'}>Мобильные приложения</div>
           </div>
-       
-       
+  <div className="Right_box">
+    <div><p>Мы — профессиональная студия, специализирующаяся на создании современных, функциональных и стильных сайтов. Наша команда дизайнеров, разработчиков и маркетологов готова воплотить ваши идеи в жизнь, создав уникальный цифровой продукт, который будет привлекать клиентов и решать бизнес-задачи.</p></div>
+    <div className="Predlagat">
+      <div><h1>Что мы предлагаем:</h1></div>
+      <div>
+        <div>Индивидуальный дизайн</div>
+        <div>Разработка сайтов под ключ</div>
+        <div>Адаптивность и кроссбраузерность</div>
+        <div>SEO-оптимизация</div>
+        <div>Техническая поддержка</div>
+      </div>
+    </div>
+    <div className="Process">
+      <div><h1>Процесс создания:</h1></div>
+      <div>
+        <div>
+          <div>
+            <div><span>01</span></div>
+            <div>Индивидуальный дизайн</div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div><span>02</span></div>
+            <div>Прототипирование и дизайн</div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div><span>03</span></div>
+            <div>Верстка и программирование</div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div><span>03</span></div>
+            <div>Верстка и программирование</div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div><span>04</span></div>
+            <div>Запуск и поддержка</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="Btn">{'<Заказать/>'}</div>
+  </div>
+</div>
+     </div> 
       </div>
     </>
   );
+
 }

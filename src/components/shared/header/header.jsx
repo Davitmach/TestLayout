@@ -47,42 +47,25 @@ else {
 },[menuActive])
     return (
         <header className={headerActive && menuActive == false ? 'HeaderActive' : ''}>
+          
             <div className="Logo_box" style={{animation:'fadeInLogo .4s ease-in-out forwards'}}><h1>Айти Перфоманс</h1></div>
             <div className={`Menu_box ${menuActive ? 'Menu_active' : 'Menu_disable'}`}>
-                <div style={{animation:'shakeMenu .4s ease-in-out forwards'}}
-                    className={activeSection === 1 ? 'Active' : ''} 
-                    onClick={() => {handleActive(1)
-                        HandleScroll('#About')}
-                    }
-                >
-                    <div><h1>О команде</h1></div>
-                    <div><h2>кто мы?</h2></div>
-                    {menuActive && <FontAwesomeIcon icon={faCaretRight}/>}
-                </div>
-                <div style={{animation:'shakeMenu .4s .1s ease-in-out forwards'}}
-                    className={activeSection === 2 ? 'Active' : ''} 
-                    onClick={() => {handleActive(2) 
-                        HandleScroll('#Service')}}
-                >
-                    <div><h1>Услуги</h1></div>
-                    <div><h2>что умеем?</h2></div>  {menuActive && <FontAwesomeIcon icon={faCaretRight}/>}
-                </div>
-                <div style={{animation:'shakeMenu .4s .2s ease-in-out forwards'}}
-                    className={activeSection === 3 ? 'Active' : ''} 
-                    onClick={() => {handleActive(3)
-                        HandleScroll('#Contact')
-
-                    }}
-                >
-                    <div><h1>Контакты</h1></div>
-                    <div><h2>поговорим?</h2></div>
-                    {menuActive && <FontAwesomeIcon icon={faCaretRight} />}
-                  
-                </div>
+        <div><h1>Стать клиентом</h1></div>
+        <div><h2>О команде</h2><span>кто мы?</span></div>
+        <div><h2>Услуги</h2><span>что умеем?</span></div>
+        <div><h2>Контакты</h2><span>поговорим?</span></div>
             </div>
-            <FontAwesomeIcon  className={menuActive ? 'Btn_active Btn' :'Btn '} onClick={()=> {
+
+            <div className='to_be_client'><h1>Стать клиентом</h1></div>
+            <svg className={menuActive ? 'Btn_active Btn' :'Btn '} onClick={()=> {
                 setMenuActive(!menuActive)
-            }} icon={menuActive ? faXmark : faBars}/>
+            }} width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 1.5H0V0.5H30V1.5Z" fill="#021800"/>
+<path d="M30 9.5L10 9.5V8.5L30 8.5V9.5Z" fill="#021800"/>
+<path d="M5 17.5H30V16.5H5V17.5Z" fill="#021800"/>
+</svg>
+
+            {/* <FontAwesomeIcon    icon={menuActive ? faXmark : faBars}/> */}
         </header>
     );
 }

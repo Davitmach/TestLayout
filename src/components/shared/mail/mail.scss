@@ -1,0 +1,154 @@
+.Mail_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFF1;
+    &>div {
+        width: 100%;
+        max-width: 1920px;
+        margin: auto;
+        padding: 120px 180px 350px;
+        display: flex;
+        justify-content: center;
+        @media (max-width:1024px) {
+            justify-content: space-between;
+        }
+        @media (max-width:768px) {
+            flex-direction: column;
+        }
+        gap: 189px;
+        @media (max-width:1440px) {
+           padding: 135px 90px 88px;
+           gap: 45px;
+       }
+       @media (max-width:1280px) {
+           padding: 97px 45px 176px;
+           gap: 26px;
+       }
+       @media (max-width:768px) {
+           padding: 120px 30px 142px;
+           gap: 33px;
+       }
+       @media (max-width:512px) {
+           padding: 113px 10px 115px;
+           gap: 33px;
+       }
+       @media (max-width:320px) {
+           padding:120px 10px 64px;
+           gap: 33px;
+       }
+       &>.Info_box {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        &>div:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+       h1 {
+        color: #0C220033;
+        font-family: Tektur;
+        font-size: 36px;
+        font-weight: 400;
+       }
+       h2 {
+        color: #0C2200;
+        font-family: Tektur;
+        font-weight: 400;
+        font-size: 32px;
+       }
+       p {
+        font-weight: 400;
+        color: #0C2200;
+        font-size: 18px;
+       }}
+    }
+.Form_box {
+    form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .Inputs {
+        display: flex;
+flex-direction: column;
+gap: 10px;
+input {
+    outline: none;
+    padding: 13px 20px;
+    border-radius: 20px;
+    border: 1px solid #0C220033;
+    background: transparent;
+    &::placeholder {
+        color: #0C220080;
+        font-family: Open Sans;
+        font-size: 16px;
+    }
+}
+    }
+    .Btn_box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    .Btn {
+        color: #FC739F;
+        font-family: Tektur;
+        font-size: 24px;
+        cursor: pointer;
+        font-weight: 400;
+        &:hover {
+            color: #DE5581;
+        }
+        &:active {
+            color: #CA416D;
+        }
+    }
+    .checkbox {
+        width: 100%;
+        display:flex;
+         justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        .custom-checkbox {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            input {
+                display: none;
+            }
+            span {
+                width: 30px;
+                height: 30px;
+                border: 1px solid rgba(6, 5, 15, 0.3);
+                border-radius:4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease;
+            }
+          }
+        
+          .custom-checkbox svg {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+        
+          .custom-checkbox input:checked + span svg {
+            opacity: 1;
+          }
+        p {
+            color: #0C22004D;
+font-size: 14px;
+span {
+color: rgba(6, 5, 15, 0.3);//styleName: Description, caption;
+cursor: pointer;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}}}}
+}}
+}

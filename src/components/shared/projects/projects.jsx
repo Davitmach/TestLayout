@@ -1,117 +1,72 @@
 import { useRef ,useState,useEffect} from "react";
 import "./projects.scss";
-import useStore from "../../../store";
-import { useInView } from 'react-intersection-observer';
-import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCaretLeft, faCaretRight} from '@fortawesome/free-solid-svg-icons'; 
 
 export default function Projects() {
-  
-  const { ref, inView } = useInView({
-    threshold: 0.9,  // Устанавливаем порог для видимости
-  });
-
-  const { activeSection, setActiveSection } = useStore();
-
-  useEffect(() => {
-    
-    if (inView) {      
-      setActiveSection(2);  
-    }
-  }, [inView, setActiveSection]);  
-  const [move, setMove] = useState(0);
-  let animationFrameId = useRef(null);
-
-  
-  const HandleMove = (event) => {
-    if (animationFrameId.current) {
-      cancelAnimationFrame(animationFrameId.current); 
-    }
-
-    animationFrameId.current = requestAnimationFrame(() => {
-      const wrapper = document.getElementById('Wrapper');
-      if (!wrapper) return;
-
-     
-      const mouseX = event.clientX;
-
-      
-      const wrapperWidth = wrapper.offsetWidth;
-
-      
-      const wrapperLeft = wrapper.getBoundingClientRect().left;
-
-      
-      const offsetX = mouseX - wrapperLeft - wrapperWidth / 2;
-
-     
-      const maxMove = 271;
-      const minMove = -271;
-
-      const newMove = Math.max(Math.min(offsetX, maxMove), minMove); 
-
-     
-      setMove(newMove);
-    });
-  };
-
-  // const style = {
-  //   transform: `translateX(${move}px)`,
-  //   transition: "transform 0.1s ease-out", 
-  // };
+  const [active,setActive] = useState('сайт');
+  const [more,setMore] = useState(false);
+const HandleChange = (state)=> {
+  setActive(state)
+}
 
   return (
     <>
-      <div id="Service" className="Projects_box" ref={ref}>
+   
+      <div id="Service" className="Projects_box" >
+      <div>
+        <div className="Top_block">
+          <div className="Left_block">
         <div className="Info_box">
+          <div></div>
+          <div></div>
           <h1>Наши работы</h1>
           <span>Здесь можете оказаться вы</span>
         </div>
-        <div className="Swipper">
-      
-            <div>
-              <div className="Title_box">
-                <h1>Создание сайтов</h1>
-              </div>
-              <div className="Img">
-              <img src="" alt="" />
-              </div>
-            </div>
-            <div>
-              <div className="Title_box">
-                <h1>Разработка ботов</h1>
-              </div>
-              <div className="Img">
-              <img src="" alt="" />
-              </div>
-            </div>
-            <div>
-              <div className="Title_box">
-                <h1>Веб-дизайн</h1>
-              </div>
-              <div className="Img">
-              <img src="" alt="" />
-              </div>
-            </div>
-            <div>
-              <div className="Title_box">
-                <h1>Mobile App</h1>
-              </div>
-              <div className="Img">
-             <img src="" alt="" />
-              </div>
-            </div>
-            <div>
-              <div className="Title_box">
-                <h1>Интеграция ИИ</h1>
-              </div>
-              <div className="Img">
-              <img src="" alt="" />
-              </div>
-            </div>
+ 
+          <div className="Types">
+            <div onClick={()=>HandleChange('сайт')} className={active == 'сайт' && 'Active'}>Создание сайтов</div>
+            <div onClick={()=>HandleChange('раз')} className={active == 'раз' && 'Active'}>Разработка ботов</div>
+            <div onClick={()=>HandleChange('веб')} className={active == 'веб' && 'Active'}>Веб-дизайн</div>
+            <div onClick={()=>HandleChange('ии')} className={active == 'ии' && 'Active'}>Интеграция ИИ</div>
+            <div onClick={()=>HandleChange('моб')} className={active == 'моб' && 'Active'}>Мобильные приложения</div>
           </div>
+        </div>
+        <div className="Right_block">
+          <div>
+            <div><h1>Более 55</h1></div>
+            <div><span>Проектов в разных нишах</span></div>
+          </div>
+          <div>
+            <div>Ритейл</div>
+            <div>HR</div>
+            <div>DIY</div>
+            <div>Автотовары</div>
+            <div>Сервисы</div>
+            <div>Металлургия</div>
+          </div>
+        </div>
+        </div>
+        <div className="Jobs">
+          <div className="Jobs_box">{Array.from({length:more == false?6 :12 },(e,_)=> {
+            return(
+              <div>
+                <div className="Img_box"></div>
+                <div className="Info_box">
+                <div className="Title_box">Название сайта</div>
+                <div className="Date_box">Январь 2025</div>
+                </div>
+              
+              </div>
+            )
+          })}</div>
+          {more == false &&   <div onClick={()=> {
+            setMore(true)
+          }} className="Btn">{`<Смотреть больше работ/>`}</div>}
+        
+        </div>
+ 
+    
        
-       
+        </div>
       </div>
     </>
   );

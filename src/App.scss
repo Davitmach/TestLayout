@@ -1,21 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&display=swap');
 * {
     &::-webkit-scrollbar {
         width: 5px; /* Ширина скроллбара */
       }
       
       &::-webkit-scrollbar-thumb {
-        background-color: white; /* Цвет ползунка */
+        background-color: #162C00; /* Цвет ползунка */
         border-radius: 6px; /* Скругление углов */
       }
       
       &::-webkit-scrollbar-track {
-        background-color: black; /* Цвет дорожки */
+        background-color: #E8FE74; /* Цвет дорожки */
       }
       
       /* Для Firefox */
       * {
         scrollbar-width: thin; /* Тонкий скроллбар */
-        scrollbar-color: rgba(255, 255, 255, 0.5); /* Цвет ползунка и дорожки */
+        scrollbar-color: #162C00; /* Цвет ползунка и дорожки */
       }
 }/* App.scss */
 

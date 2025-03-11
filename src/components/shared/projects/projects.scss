@@ -1,87 +1,218 @@
 .Projects_box {
     width: 100%;
-   
-    height: auto;
-    background: rgba(205, 165, 213, 1);
 
-    padding: 90px 0;
+    height: auto;
+    background: #FFFFF1;
+
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    gap: 42px;
-    @media  (max-width: 1236px) {
-       
-            padding: 50px 30px;
-        
-    }
-    .Info_box {
-        max-width:  1240px;
-        width: 100%;
+    &>div {
+        max-width: 1920px;
         margin: auto;
+        width: 100%;
         display: flex;
-        align-items: start;
-        justify-content: center;
         flex-direction: column;
-        h1 {
-          color:  rgba(6, 5, 15, 1);
-            font-size: 50px;
-            font-weight: 400;
-            @media (max-width:566px) {
-                font-size: 35px;
-            }
-        }
-        span {
-            color: rgba(6, 5, 15, 0.4);
+        gap: 40px;
+ padding: 120px 180px 0;
+ @media (max-width:1440px) {
+    padding: 135px 90px 50px;
+    gap: 45px;
+}
+@media (max-width:1280px) {
+    padding: 97px 45px 50px;
+    gap: 26px;
+}
+@media (max-width:768px) {
+    padding: 120px 30px 50px;
+    gap: 33px;
+}
+@media (max-width:512px) {
+    padding: 63px 10px 50px;
+    gap: 33px;
+}
+@media (max-width:320px) {
+    padding: 43px 10px 20px;
+    gap: 33px;
+}
+.Top_block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  align-items: end;
+  @media (max-width:512px) {
+flex-direction: column;
+align-items: start;
+gap: 40px;
+ }
+  .Right_block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &>div:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h1 {
+          color: #0C2200CC;
+          font-weight: 400;
+          font-size: 32px;
+      }
+      span {
+          color: #0C2200CC;
+          font-weight: 400;
+          font-size: 16px;
+      }
+    }
+    &>div:last-child {
+    max-width: 309px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  &>div:nth-child(2) {
+    border-radius: 30px;
+    font-size: 14px;
+    width: 39px;
+  }
+  &>div:nth-child(3) {
+    border-radius: 30px;
+    font-size: 14px;
+    // width: 39px;
 
-            font-size: 30px;
+  }
+      div {
+          border: 1px solid #0C220080;
+          border-radius: 50px;
+          padding: 10px;
+          color: #0C2200CC;
+          cursor: pointer;
+      }
+    }
+  }
+  .Left_block {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+  }
+  .Types {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &>div {
+          color: #FC739F80;
+          font-weight: 400;
+          font-size: 18px;
+          font-family: Tektur;
+          cursor: pointer;
+          &:hover {
+            color: #DE5581;
+          }
+          &:active {
+            color: #CA416D;
+          }
+      }
+      .Active {
+          color: #FC739F;
+          cursor: pointer;
+          &:hover {
+            color: #DE5581;
+          }
+          &:active {
+            color: #CA416D;
+          }
+          &::after {
+              content: url('../../../../public/plus.svg');
+              margin-left: 10px;
+          }
+      }
+    }
+      .Info_box {
+        
+          width: 100%;
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+     
+          h1 {
+            color:  rgba(6, 5, 15, 1);
+              font-size: 36px;
+              font-weight: 400;
+              font-family: Tektur;
+              @media (max-width:566px) {
+                  font-size: 35px;
+              }
+          }
+          span {
+              color: rgba(6, 5, 15, 0.4);
+              font-family: Tektur;
+              font-size: 32px;
+          }
+      }
+    
+}
+.Jobs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .Btn {
+   color: #FC739F;
+font-weight: 400;
+font-size: 24px;
+font-family: Tektur;
+cursor: pointer;
+margin-top: 40px;
+&:hover {
+    color: #DE5581;
+}
+&:active {
+    color: #CA416D;
+}
+}
+.Jobs_box {
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ grid-column-gap: 20px;
+ grid-row-gap: 40px;
+ @media (max-width:768px) {
+    grid-template-columns: repeat(2,1fr);
+ }
+ @media (max-width:512px) {
+    grid-template-columns: repeat(1,1fr);
+ }
+ &>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .Info_box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .Date_box {
+            color: #0C220033;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .Title_box {
+            font-weight: 600;
+            font-size: 24px;
+            color: #0C2200;
+            @media (max-width:1024px) {
+                font-size: 20px;
+            }
         }
     }
-    .Swipper {
-        max-width:  1240px;
+    .Img_box {
         width: 100%;
-        margin: auto;
-        overflow-x: auto;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-gap: 20px;
-        padding: 20px 0;
-            &>div {
-                width: 385px;
-                border-radius: 60px;
-            height: auto;
-               
-                padding: 56px 40px ;
-                flex-shrink: 0;
-                background: rgba(6, 5, 15, 0.05);
-                .Img {
-                    margin-top: 20px;
-                    background-color: rgba(217, 217, 217, 1);
-                    width: 100%;
-                    aspect-ratio: 1/.9;
-                    // img {
-                    //     width: 100%;
-                    //     height: 100%;
-                    //     background-color: red;
-                    //  }
-        
-                }
-@media (max-width:904px) {
-    width: 300px;
-    height: 400px;
+        aspect-ratio: 1/1;
+        background-color: #D9D9D9;
+    }
+ }
+}    
 }
-                h1 {
-                   color: rgba(6, 5, 15, 0.7);
 
-                    font-size: 18px;
-                    font-weight: 500;
-                }
-
-            }
-       
-          
-        }
+    }
     
    
 
