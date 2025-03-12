@@ -1,11 +1,52 @@
+import { useRef,useEffect,useState } from 'react';
+import { gapi } from 'gapi-script';
 import './mail.scss';
+
+
 export const Mail = ()=> {
+  const name = useRef(null);
+  const rule = useRef(null);
+  const number = useRef(null);
+  const mail = useRef(null);
+
+
+
+  const HandleSubmit = async () => {
+    const data = {
+      name: name.current.value ?name.current.value :'' ,
+      position: rule.current.value ? rule.current.value : '',
+      phone: number.current.value ? number.current.value :'',
+      email: mail.current.value ? mail.current.value :''
+    };
+  
+    try {
+      const response = await fetch("https://itperfomance.ru/api/sheets/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+  
+      if (!response.ok) {
+        throw new Error("Error: " + response.statusText);
+      }
+  
+      const result = await response.json();
+      console.log(result); // handle the response data here
+    } catch (error) {
+      console.error("Request failed", error);
+    }
+  };
+  
+
+  
+
+
+  
     return(
         <div className='Mail_container'>
 <div>
-
-
-
 <div className='Info_box'>
   <div>
     <div><h1>Вы дошли сюда?</h1></div>
@@ -16,13 +57,15 @@ export const Mail = ()=> {
 <div className='Form_box'>
 <form action="">
   <div className='Inputs'>
-    <input type="text" placeholder='Имя' />
-    <input type="text" placeholder='Должность' />
-    <input type="text" placeholder='+7 (000) 000 00-00' />
-    <input type="mail" placeholder='Почта'/>
+    <input ref={name} type="text" placeholder='Имя' />
+    <input ref={rule} type="text" placeholder='Должность' />
+    <input ref={number} type="text" placeholder='+7 (000) 000 00-00' />
+    <input ref={mail} type="mail" placeholder='Почта'/>
   </div>
   <div className='Btn_box'>
-    <div className='Btn'>{'<Отправить/>'}</div>
+    <div onClick={()=> { 
+HandleSubmit()
+    }} className='Btn'>{'<Отправить/>'}</div>
  <div className='checkbox'>
     <div>
     <label className="custom-checkbox">
