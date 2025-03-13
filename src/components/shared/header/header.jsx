@@ -47,7 +47,7 @@ else {
     return (
         <header className={headerActive && menuActive == false ? 'HeaderActive' : ''}>
           
-            <div className="Logo_box" style={{animation:'fadeInLogo .4s ease-in-out forwards'}}><h1>Айти Перфоманс</h1></div>
+            <div className="Logo_box" style={{animation:'fadeInLogo .4s ease-in-out forwards'}}><h1>IT Performance</h1></div>
             <div className={`Menu_box ${menuActive ? 'Menu_active' : 'Menu_disable'}`}>
         <div><h1>Стать клиентом</h1></div>
         <div onClick={()=> HandleScroll('#Comand')}><h2>О команде</h2><span>кто мы?</span></div>

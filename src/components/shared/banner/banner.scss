@@ -8,28 +8,32 @@
     align-items: start;
     flex-direction: column;
     justify-content: center;
-padding:225px 180px 50px;
+padding:180px 180px 50px;
 gap: 135px;
 
 @media (max-width:1440px) {
-    padding: 135px 90px 50px;
+    padding: 67px 90px 50px;
     gap: 45px;
 }
 @media (max-width:1280px) {
-    padding: 97px 45px 50px;
+    padding: 92px 45px 30px;
     gap: 26px;
 }
-@media (max-width:768px) {
-    padding: 430px 30px 50px;
+@media (max-width:1024px) {
+    padding: 52px 45px 30px;
     gap: 33px;
+}
+@media (max-width:768px) {
+    padding: 436px 30px 50px;
+    gap: 259px;
 }
 @media (max-width:512px) {
-    padding: 113px 10px 50px;
-    gap: 33px;
+    padding: 120px 10px 50px;
+    gap: 40px;
 }
 @media (max-width:320px) {
-    padding: 10px 10px 20px;
-    gap: 33px;
+    padding: 8px 10px 20px;
+    gap: 12px;
 }
     .Info_box {
         max-width: 1300px;
@@ -72,12 +76,16 @@ gap: 135px;
         }
      flex-wrap: wrap;
         gap: 10px;
+        @media (max-width:320px) {
+            gap: 5px;
+        }
         .it {
             font-family: Tektur;
             font-weight: 400;
             font-size: 72px;
             @media (max-width:1024px) {
                 font-size: 32px;
+                font-weight: 600;
             }
             @media (max-width:512px) {
                 font-size: 30px;
@@ -89,14 +97,17 @@ gap: 135px;
         .back {
             font-size: 48px;
             font-weight: 400;
+        
             @media (max-width:1024px) {
                 font-size: 32px;
+                
             }
             @media (max-width:512px) {
                 font-size: 28px;
             }
             @media (max-width:400px) {
                 font-size: 18px;
+              
             }
         }
         .mob {
@@ -188,7 +199,7 @@ gap: 135px;
         &>div {
             border-radius: 100px;
             border: 1px solid #162C00;
-            padding: 20px;
+            padding:10px 20px;
             color: #162C00;
             display: flex;
             align-items: center;
@@ -197,10 +208,10 @@ gap: 135px;
             display: flex;
             align-items: center;
             gap: 10px;
-            @media (max-width:350px) {
-                padding: 10px 20px;
+            @media (max-width:480px) {
+                padding: 13px 20px;
             }
-      
+          
       
         }
     }

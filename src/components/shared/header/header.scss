@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tektur:wght@400..900&display=swap');
 header {
     // max-width: 1920px;
     margin: auto;
@@ -9,14 +9,14 @@ header {
     width: 100%;
     height: auto;
  
-    padding: 30px 180px;
+    padding: 36.5px 180px;
   position: relative;
 
 @media (max-width:1440px) {
-    padding: 30px 90px;
+    padding: 21.5px 90px;
 }
 @media (max-width:1280px) {
-    padding: 30px 45px;
+    padding: 21.5px 45px;
 }
 @media (max-width:512px) {
     padding: 30px 10px;
@@ -29,10 +29,14 @@ header {
             font-size: 36px;
             letter-spacing: 2px;
             transition: .4s;
+            font-family: Tektur;
             cursor: pointer;
-            @media (max-width:708px) {
-                font-size: 25px;
-            }
+          @media (max-width:1024px) {
+            font-size: 24px;
+          }
+          @media (max-width:320px) {
+            font-size: 18px;
+          }
           
         }
     }

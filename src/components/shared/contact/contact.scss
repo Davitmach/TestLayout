@@ -42,7 +42,7 @@
         align-items: start;
         justify-content: center;
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
         .Title_box {
             width: 100%;
             display: flex;
@@ -50,6 +50,7 @@
             justify-content: center;
             flex-direction: column;
            gap: 10px;
+           margin-bottom: 10px;
             h1 {
                 font-family: Tektur;
                 color: #0C2200;
@@ -88,7 +89,7 @@
                 border-radius: 50px;
                 border: 1px solid #0C220033;
                 transition: .4s;
-                padding: 25px 30px;
+                padding: 24.5px 30px;
                 display: flex;
                 align-items:center;
                 justify-content:space-between;
