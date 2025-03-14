@@ -5,7 +5,6 @@ import './banner.scss';
 
 export default function Banner() {
 
-
   return (
    <div className='Banner_container'>
     <div className='Mini_boxes_box'>

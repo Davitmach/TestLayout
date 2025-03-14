@@ -36,12 +36,14 @@ const HandleChange = (state)=> {
             <div><span>Проектов в разных нишах</span></div>
           </div>
           <div>
-            <div>Ритейл</div>
-            <div>HR</div>
-            <div>DIY</div>
-            <div>Автотовары</div>
+            <div>Логистика</div>
+            <div>Маркетплейсы</div>
+            <div>Ремонты</div>
+            <div>Дизайн</div>
+            <div>Digital</div>
             <div>Сервисы</div>
-            <div>Металлургия</div>
+            <div>B2B</div>
+            <div>B2C</div>
           </div>
         </div>
         </div>

@@ -8,8 +8,8 @@
     align-items: start;
     flex-direction: column;
     justify-content: center;
-padding:180px 180px 50px;
-gap: 135px;
+padding:100px 180px 50px;
+gap: 50px;
 
 @media (max-width:1440px) {
     padding: 67px 90px 50px;
@@ -207,7 +207,7 @@ gap: 135px;
             height: auto;
             display: flex;
             align-items: center;
-            gap: 10px;
+            
             @media (max-width:480px) {
                 padding: 13px 20px;
             }
