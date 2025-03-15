@@ -453,6 +453,8 @@ font-size: 20px;
                 }
             }
             .Btn {
+                a {
+                    text-decoration: none;
                 color: #FC739F;
                 font-family: Tektur;
                 font-weight: 400;
@@ -470,7 +472,7 @@ font-size: 20px;
                   &:active {
                     color: #CA416D;
                   }
-            }
+            }}
         }
       }
 }

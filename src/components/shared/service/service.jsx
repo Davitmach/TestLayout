@@ -50,7 +50,7 @@ const WebDev = ()=> {
       </div>
     </div>
     <div><h3>Наши сайты не просто выглядят красиво — они работают и приводят клиентов.</h3></div>
-    <div className="Btn">{'<Заказать/>'}</div>
+    <div className="Btn"><a href="#Mail">{'<Заказать/>'}</a></div>
 </>
   )
 }
