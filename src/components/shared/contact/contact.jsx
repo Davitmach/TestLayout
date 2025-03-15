@@ -81,7 +81,7 @@ export default function Contact() {
                    
                 </div>
             </div>
-            <div className="Btn">{'<Написать нам на почту/>'}</div>
+            <div className="Btn"><a href="mailto:hello@itperfomance.ru">{'<Написать нам на почту/>'}</a></div>
  
         </div>
        

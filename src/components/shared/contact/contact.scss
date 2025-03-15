@@ -89,7 +89,7 @@
                 border-radius: 50px;
                 border: 1px solid #0C220033;
                 transition: .4s;
-                padding: 24.5px 30px;
+                padding: 15px 30px;
                 display: flex;
                 align-items:center;
                 justify-content:space-between;
@@ -102,7 +102,7 @@ transition: .4s;
                 }
              
                 .Title {
-                    font-size: 35px;
+                    font-size: 24px;
                     font-weight: 400;
                     @media (max-width:1024px) {
                         font-size: 24px;
@@ -131,10 +131,12 @@ transition: .4s;
             }
         }
         .Btn {
+            a {
             color: #FC739F;
             font-family: Tektur; 
             font-weight: 400;
              font-size: 35px;
+             text-decoration: none;
              cursor: pointer;
              @media (max-width:1024px) {
                 font-size: 28px;
@@ -148,7 +150,7 @@ transition: .4s;
              &:active {
                 color: #CA416D;
              }
-        }
+        }}
       
     }
 }

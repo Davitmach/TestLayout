@@ -51,6 +51,7 @@ else {
             <div className={`Menu_box ${menuActive ? 'Menu_active' : 'Menu_disable'}`}>
         <div><h1>Стать клиентом</h1></div>
         <div onClick={()=> HandleScroll('#Comand')}><h2>О команде</h2><span>кто мы?</span></div>
+        <div onClick={()=> HandleScroll('#Comand')}><h2>Кейсы</h2></div>
         <div onClick={()=> HandleScroll('#Service')}><h2>Услуги</h2><span>что умеем?</span></div>
         <div onClick={()=> HandleScroll('#Contact')}><h2>Контакты</h2><span>поговорим?</span></div>
             </div>

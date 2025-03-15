@@ -63,6 +63,37 @@
             }
         }
     }
+    .Info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        @media (max-width:480px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &>div:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .Title {
+                color: #0C2200;
+                font-family: Tektur;
+                font-size: 24px;
+               
+            }
+            
+        }
+        p {
+            color: #0C2200;
+            font-size: 18px;
+            font-family: Open Sans;
+            @media (max-width:1024px) {
+                    font-size: 16px;
+            }
+        
+        }
+    }
     .Types {
         display: flex;
         flex-direction: column;
@@ -111,9 +142,32 @@ gap: 230px;
 @media (max-width:1024px) {
     gap: 42px;
 }
-@media (max-width:768px) {
+@media (max-width:1202px) {
+   &:has(.Process) {
     flex-direction: column;
+    }
 }
+@media (max-width:846px) {
+    &:has(.Princip) {
+     flex-direction: column;
+     }
+ }
+ @media (max-width:840px) {
+    &:has(.Vajno) {
+     flex-direction: column;
+     }
+ }
+ @media (max-width:872px) {
+    &:has(.Steps) {
+     flex-direction: column;
+     }
+ }
+ @media (max-width:928px) {
+    &:has(.Managment) {
+     flex-direction: column;
+     }
+ }
+
         .Right_box {
             display: flex;
             flex-direction: column;
@@ -129,6 +183,21 @@ gap: 230px;
                 color: #0C2200;
                 font-size: 18px;
                 font-weight: 400;
+            }
+            h2 {
+                color: #0C2200;
+                font-family: Tektur;
+                font-size: 18px;
+                font-weight: 400;
+            }
+            h3 {
+                color: #0C2200;
+                font-weight: 400;
+                font-size: 24px;
+                font-family: Tektur;
+                @media (max-width:360px) {
+font-size: 20px;
+                }
             }
             .Predlagat {
                 display: flex;
@@ -146,6 +215,10 @@ gap: 230px;
                         color: #0C2200;
                         font-size: 16px;
                         font-weight: 400;
+                        @media (max-width:1202px) {
+                            width: 100%;
+                            white-space: nowrap;
+                        }
                         @media (max-width:1024px) {
                             padding: 11px 10px;
                          }
@@ -181,23 +254,203 @@ gap: 230px;
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
-                            transform: translateX(20%);
-                            @media (max-width:1500px) {
-                                transform: translateX(10%); 
+                            transform: translateX(90px);
+                            @media (max-width:1864px) {
+                                transform: translateX(40px); 
                             }
-                            @media (max-width:1144px) {
+                            @media (max-width:1438px) {
                                 transform: translateX(0); 
                             }
                             gap: 20px;
+                            @media (max-width:424px) {
+                                gap: 10px;
+                            }
                             span {
                                 color: #0C220033;
                                 font-weight: 500;
                                 font-size: 16px;
-                                font-family: Schibsted Grotesk;
+                                font-family: Schibsted Grotesk,Open Sans;
+                            }
+                            &>div:last-child {
+                                @media (max-width:424px) {
+                                    font-size: 14px;
+                                }
+                            }
+                            div {
+                                white-space: nowrap;
                             }
                         }
                     }
                 }  
+            }
+            .Princip {
+              
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                &>div:last-child {
+                 display: flex;
+                 flex-direction: column;
+                
+                    gap: 20px;
+                
+                    &>div {
+
+                        border: 1px solid #0C220033;
+                        border-radius: 50px;
+                        padding: 10px 20px;
+                        color: #0C2200;
+                        font-size: 16px;
+                        font-weight: 400;
+                     display: inline-flex;
+                     align-items: center;
+                     
+                     @media (max-width:1024px) {
+                        padding: 11px 10px;
+                     }
+                     @media (max-width:954px) {
+                      border-radius: 20px;
+                    }
+                        &>div {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                          
+                            gap: 20px;
+                            @media (max-width:954px) {
+                                flex-direction: column;
+                                gap: 10px;
+                                align-items: start;
+                            }
+                            span {
+                                color: #0C220033;
+                                font-weight: 500;
+                                font-size: 16px;
+                                font-family: Schibsted Grotesk,Open Sans;
+                            }
+                        }
+                    }
+                }  
+            }
+            .Vajno {
+              
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                &>div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+                
+                    gap: 20px;
+             
+                    &>div {
+@media (max-width:1855px) {
+    width: 100%;
+}
+                        border: 1px solid #0C220033;
+                        border-radius: 50px;
+                        padding: 10px 40px;
+                        color: #0C2200;
+                        font-size: 16px;
+                        font-weight: 400;
+                     display: inline-flex;
+                     align-items: center;
+                     gap: 20px;
+                     
+                 
+                     @media (max-width:954px) {
+                      border-radius: 20px;
+                    }
+                        &>div {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                          
+                            gap: 20px;
+                            @media (max-width:954px) {
+                                flex-direction: column;
+                                gap: 10px;
+                                align-items: start;
+                            }
+                            span {
+                                color: #0C220033;
+                                font-weight: 500;
+                                font-size: 16px;
+                                font-family: Schibsted Grotesk,Open Sans;
+                            }
+                        }
+                    }
+                }  
+            }
+            .Steps {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                &>div {
+                    display: flex;
+                    gap: 10px;
+                    align-items: start;
+                    &>div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                    h1 {
+                        font-weight: 600;
+                        font-size: 24px;
+                        color: #0C2200;
+                        @media (max-width:768px) {
+                            font-size: 20px;
+                        }
+                        @media (max-width:480px) {
+                            font-size: 16px;
+                        }
+                    }
+                    span {
+                        color: #0C220033;
+                        font-weight: 600;
+                        font-size: 20px;
+                        margin-top:3px;
+                        @media (max-width:768px) {
+                            font-size: 18px;
+                        }
+                        @media (max-width:480px) {
+                            font-size: 16px;
+                        }
+                    }
+                    p {
+                        color: #0C2200;
+
+                        font-size: 16px;
+                        &::before {
+                            content: url('../../../../public/arrow.svg');
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            .Managment {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                &>div {
+                    display: flex;
+                    gap: 10px;
+                    span {
+                        color: #0C220033;
+                        font-size: 20px;
+                        @media (max-width:768px) {
+                            font-size: 16px;
+                        }
+                    }
+                    p {
+                        color: #0C2200;
+                        font-size: 20px;
+                        @media (max-width:768px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
             }
             .Btn {
                 color: #FC739F;
