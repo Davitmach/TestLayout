@@ -21,7 +21,12 @@ header {
 @media (max-width:512px) {
     padding: 30px 10px;
 }
+a {
+    text-decoration: none;
+    cursor: pointer;
 
+
+}
     .Logo_box {
         h1 {
             color: #162C00  ;
@@ -44,14 +49,14 @@ header {
         opacity: 0;
         position: absolute;
         right: 40px;
-        @media (max-width:1244px){
+        @media (max-width:1532px){
             opacity: 1;
         }
         @media (max-width:494px){
             display: none;
         }
         transform: translateX(-40px);
-        h1 {
+       a {
         color: #162C00;
         font-weight: 400;
         font-size: 18px;
@@ -61,8 +66,8 @@ header {
         align-items: center;
         justify-content: space-between;
         gap: 50px;
-    
-        @media (max-width:1244px) {
+        transition: .4s;
+        @media (max-width:1532px) {
             position: fixed;
             background-color: #E8FE74;
          justify-content: flex-start;
@@ -77,12 +82,14 @@ header {
             z-index: 9999;
         }
         &>div:first-child {
-            @media (max-width:1244px) {
+            @media (max-width:1532px) {
                 display: none;
             }
         }
-        &>div:first-child h1 {
+        &>div:first-child a {
             color: #021800;
+            font-size: 28px;
+            font-weight: 400;
         }
         &>div:hover {
             span {
@@ -100,7 +107,7 @@ header {
             position: relative;
           cursor: pointer;
           transition:color .4s;
-          @media (max-width:1244px) {
+          @media (max-width:1532px) {
             flex-direction: row;
             gap: 10px;
          
@@ -170,38 +177,39 @@ white-space: nowrap;
        
     }
     .Menu_active {
-        @media (max-width:1244px) {
+        @media (max-width:1532px) {
         width: 100%;
         
         background-color: #E8FE74;
-        
-        animation:turnRight .7s ease-in-out forwards ;
-        @keyframes turnRight {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(0%);
-            }
-        }
+        transform: translateX(0%);
+        // animation:turnRight .7s ease-in-out forwards ;
+        // @keyframes turnRight {
+        //     from {
+        //         transform: translateX(100%);
+        //     }
+        //     to {
+        //         transform: translateX(0%);
+        //     }
+        // }
         }
     }
     .Menu_disable {
-        @media (max-width:1244px) {
-        animation:turnLeft .7s ease-in-out forwards ;
+        @media (max-width:1532px) {
+        // animation:turnLeft .7s ease-in-out forwards ;
         background-color: #E8FE74;
         width: 100%;
        top: 0;
        left: 0;
        position: fixed;
-        @keyframes turnLeft {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
+       transform: translateX(-100%);
+        // @keyframes turnLeft {
+        //     from {
+        //         transform: translateX(0);
+        //     }
+        //     to {
+        //         transform: translateX(-100%);
+        //     }
+        // }
     }}
     .Btn {
         position: absolute;
@@ -213,7 +221,7 @@ white-space: nowrap;
        visibility: hidden;
        display: none;
        z-index: 999999;
-       @media (max-width:1244px) {
+       @media (max-width:1532px) {
        display: flex;
        visibility: visible;
     }
@@ -238,11 +246,11 @@ white-space: nowrap;
 
     z-index: 1000;
     top: 0;
-    @media (max-width:1244px) {
+    @media (max-width:1532px) {
         position: sticky;
         top: 0;
     }
-    @media (min-width:1244px) {
+    @media (min-width:1532px) {
     animation: animHeader .6s  ease-in-out forwards;
     @keyframes animHeader {
         from {

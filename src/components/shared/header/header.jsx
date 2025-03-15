@@ -5,6 +5,7 @@ import useStore from '../../../store';
 
 export default function Header() {
     const [headerActive, setHeader] = useState(false);
+    const [active,setActive] = useState(false)
     const { activeSection, setActiveSection } = useStore();
 const [menuActive,setMenuActive] = useState(false);
    
@@ -47,16 +48,18 @@ else {
     return (
         <header className={headerActive && menuActive == false ? 'HeaderActive' : ''}>
           
-            <div className="Logo_box" style={{animation:'fadeInLogo .4s ease-in-out forwards'}}><h1>IT Performance</h1></div>
+            <div className="Logo_box"
+            //  style={{animation:'fadeInLogo .4s ease-in-out forwards'}}
+             ><h1>IT Performance</h1></div>
             <div className={`Menu_box ${menuActive ? 'Menu_active' : 'Menu_disable'}`}>
-        <div><h1>Стать клиентом</h1></div>
+        <div><a href="#Mail">Стать клиентом</a></div>
         <div onClick={()=> HandleScroll('#Comand')}><h2>О команде</h2><span>кто мы?</span></div>
         <div onClick={()=> HandleScroll('#Comand')}><h2>Кейсы</h2></div>
         <div onClick={()=> HandleScroll('#Service')}><h2>Услуги</h2><span>что умеем?</span></div>
         <div onClick={()=> HandleScroll('#Contact')}><h2>Контакты</h2><span>поговорим?</span></div>
             </div>
 
-            <div className='to_be_client'><h1>Стать клиентом</h1></div>
+            <div className='to_be_client'><a href="#Mail">Стать клиентом</a></div>
             <svg className={menuActive ? 'Btn_active Btn' :'Btn '} onClick={()=> {
                 setMenuActive(!menuActive)
             }} width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
