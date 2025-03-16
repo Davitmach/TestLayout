@@ -82,7 +82,7 @@ const Dev = ()=> {
   
       </div>
     </div>
-    <div className="Btn">{'<Заказать/>'}</div>
+    <div className="Btn"><a href="#Mail">{'<Заказать/>'}</a></div>
     </>
   )
 }
@@ -121,7 +121,7 @@ const Dizayn = ()=> {
         </div>
       </div>
     </div>
-    <div className="Btn">{'<Заказать/>'}</div>
+    <div className="Btn"><a href="#Mail">{'<Заказать/>'}</a></div>
     </>
   )
 }
@@ -146,7 +146,7 @@ const Mob = ()=> {
       </div>
     </div>
   </div>
-  <div className="Btn">{'<Заказать/>'}</div>
+  <div className="Btn"><a href="#Mail">{'<Заказать/>'}</a></div>
   </>
   )
 }
@@ -168,7 +168,7 @@ const Managment = ()=> {
         <div><p>Но главное — мы остаёмся рядом и после запуска. Анализируем, как пользователи взаимодействуют с продуктом, находим слабые места, оптимизируем. Потому что цифровой продукт должен развиваться вместе с вашим бизнесом.</p></div>
       </div>
     </div>
-    <div className="Btn">{'<Заказать/>'}</div>
+    <div className="Btn"><a href="#Mail">{'<Заказать/>'}</a></div>
     </>
   )
 }

@@ -10,7 +10,9 @@
     justify-content: center;
 padding:100px 180px 50px;
 gap: 50px;
-
+@media (max-height:951px) {
+    padding:10px 180px 50px;
+}
 
 @media (max-width:1440px) {
     min-height: calc(100vh - 90px);
@@ -52,6 +54,10 @@ gap: 50px;
         }     @media (max-width:379px) {
             font-size: 24px;
             font-weight: 400;
+        }
+        @media (max-height:951px) {
+            font-size: 50px;
+            max-width: 900px;
         }
     }
     .Mini_boxes_box {
@@ -96,6 +102,9 @@ gap: 50px;
             @media (max-width:400px) {
                 font-size: 24px;
             }
+            @media (max-height:951px) {
+                font-size: 45px;
+            }
         }
         .back {
             font-size: 48px;
@@ -112,6 +121,9 @@ gap: 50px;
                 font-size: 18px;
               
             }
+            @media (max-height:951px) {
+                font-size: 32px;
+            }
         }
         .mob {
             font-size: 28px;
@@ -121,6 +133,9 @@ gap: 50px;
             }
             @media (max-width:400px) {
                 font-size: 18px;
+            }
+            @media (max-height:951px) {
+                font-size: 24px;
             }
         
         }
@@ -133,7 +148,9 @@ gap: 50px;
             @media (max-width:512px) {
                 font-size: 14px;
             }
-            
+            @media (max-height:951px) {
+                font-size: 16px;
+            }
         }
         .dev {
             font-size: 48px;
@@ -147,6 +164,9 @@ gap: 50px;
             @media (max-width:400px) {
                 font-size: 18px;
             }
+            @media (max-height:951px) {
+                font-size: 32px;
+            }
         }
         .des {
             font-size: 48px;
@@ -159,6 +179,9 @@ gap: 50px;
             }
             @media (max-width:400px) {
                 font-size: 18px;
+            }
+            @media (max-height:951px) {
+                font-size: 30px;
             }
         }
         .chat {
@@ -180,12 +203,18 @@ gap: 50px;
             @media (max-width:400px) {
                 font-size: 18px;
             }
+            @media (max-height:951px) {
+                font-size: 32px;
+            }
         }
         .anal {
             font-size: 20px;
             font-weight: 400;
          
             @media (max-width:1024px) {
+                font-size: 16px;
+            }
+            @media (max-height:951px) {
                 font-size: 16px;
             }
         }
@@ -197,6 +226,9 @@ gap: 50px;
             }
             @media (max-width:400px) {
                 font-size: 18px;
+            }
+            @media (max-height:951px) {
+                font-size: 26px;
             }
         }
         &>div {
