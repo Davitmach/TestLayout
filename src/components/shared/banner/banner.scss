@@ -7,7 +7,7 @@
     width: 100%;
     max-width: 1920px;
     margin: auto;
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 121px);
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -21,7 +21,7 @@ gap: 50px;
 }
 
 @media (max-width:1440px) {
-    min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 91px);
     padding: 67px 90px 50px;
     gap: 45px;
 }
@@ -32,11 +32,12 @@ gap: 50px;
 @media (max-width:1024px) {
     padding: 52px 45px 30px;
     gap: 33px;
-    min-height: calc(100vh - 74px);
+    min-height: calc(100vh - 91px);
 }
 @media (max-width:768px) {
     padding: 436px 30px 50px;
     gap: 259px;
+    min-height: calc(100vh - 74px);
 }
 @media (max-width:512px) {
     padding: 57px 10px 50px;
@@ -52,6 +53,7 @@ gap: 50px;
         font-weight: 600;
         font-size: 72px;
         font-family:Tektur ;
+       
         @media (max-width:1024px) {
             font-size: 64px;
         }
@@ -62,9 +64,10 @@ gap: 50px;
             font-weight: 400;
         }
         @media (max-height:951px) {
-            font-size: 50px;
+            font-size: 35px;
             max-width: 900px;
             margin-top: 10vh;
+            
         }
     }
     .Mini_boxes_box {
