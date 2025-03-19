@@ -41,7 +41,10 @@ export default function Contact() {
                 <div style={{display:'flex'}} className={active == '1'?'Active' :''} onClick={()=> HandleActive('1')}>
                     <div >   <div className="Title">1. Обсуждаем проект, определяем подходим ли мы друг другу. </div>
                    {active == '1' && <div className="Info_box">
-                        <div className="Purple">это кто-то из вашей команды и наш проектный менеджер.</div>
+                        <div className="Purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 10L20 15L15 20" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>Если сайт или приложение выглядит устаревшим, неудобным или перегруженным, пользователь закроет его, так и не разобравшись, что вы предлагаете</div>
                     </div>}</div>
                     <div><svg style={active == '1' ? {transform:'rotate(0deg)'} :{transform:'rotate(180deg)'}} width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 12L11.5 1L1 12" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -53,11 +56,11 @@ export default function Contact() {
                     <div> <div className="Title">2. Детализируем ваши хотелки в проекте</div>
                    {active == '2' &&<div className="Info_box">
                         <div className="White">
-                        Составляем Техническое задание проекта (ТЗ) - что должно быть реализовано. </div>
+                       </div>
                         <div className="Purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 10L20 15L15 20" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 <path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>Разделы. Наполнение. Функции. Дизайн.    
+</svg>Если сайт или приложение выглядит устаревшим, неудобным или перегруженным, пользователь закроет его, так и не разобравшись, что вы предлагаете 
 </div>
                     </div> } 
                     </div>
@@ -67,14 +70,34 @@ export default function Contact() {
                    
                 </div>
                 <div className={active == '3'?'Active' :''} onClick={()=> HandleActive('3')}>
-                    <div> <div className='Title'>3. Определяем сроки и бюджет. </div></div>
-                    <div><svg style={active == '3' ? {transform:'rotate(0deg)'} :{transform:'rotate(180deg)'}} width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div> <div className="Title">4. Определяем сроки и бюджет. </div>
+                   {active == '3' &&<div className="Info_box">
+                        <div className="White">
+                       </div>
+                        <div className="Purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 10L20 15L15 20" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>Если сайт или приложение выглядит устаревшим, неудобным или перегруженным, пользователь закроет его, так и не разобравшись, что вы предлагаете 
+</div>
+                    </div> } 
+                    </div>
+                    <div><svg style={active == '2' ? {transform:'rotate(0deg)'} :{transform:'rotate(180deg)'}} width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 12L11.5 1L1 12" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg></div>
                    
                 </div>
                 <div className={active == '4'?'Active' :''} onClick={()=> HandleActive('4')}>
-                    <div> <div className='Title'>4. Решаем формальности и приступаем к работе. </div></div>
+                    <div> <div className="Title">4. Решаем формальности и приступаем к работе.</div>
+                   {active == '4' &&<div className="Info_box">
+                        <div className="White">
+                       </div>
+                        <div className="Purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 10L20 15L15 20" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>Если сайт или приложение выглядит устаревшим, неудобным или перегруженным, пользователь закроет его, так и не разобравшись, что вы предлагаете 
+</div>
+                    </div> } 
+                    </div>
                     <div><svg style={active == '4' ? {transform:'rotate(0deg)'} :{transform:'rotate(180deg)'}} width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 12L11.5 1L1 12" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg></div>
