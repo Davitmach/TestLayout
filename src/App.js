@@ -1,25 +1,24 @@
 
 import './App.scss';
-import About from './components/shared/about/about';
-import Banner from './components/shared/banner/banner';
-import Contact from './components/shared/contact/contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home } from './page/home/page';
 import Footer from './components/shared/footer/footer';
 import Header from './components/shared/header/header';
-import { Mail } from './components/shared/mail/mail';
-import Projects from './components/shared/projects/projects';
-import Service from './components/shared/service/service';
-
+import { Politika } from './page/politika/page';
 function App() {
   return (
- <main >
- <Header/>
- <Banner/>
- <Projects/>
- <Service/>
-
- <Contact/>
- <Mail/>
- </main>
+    <div className="App">
+      <Router>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/politika" element={<Politika />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

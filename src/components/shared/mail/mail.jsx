@@ -1,6 +1,6 @@
 'use client';
 import { useRef,useEffect,useState } from 'react';
-
+import {Link} from 'react-router-dom'
 import './mail.scss';
 
 export const Mail = ()=> {
@@ -93,7 +93,7 @@ HandleSubmit()
   </span>
 </label>
     </div>
-    <div><p>Я согласен с <span>политикой конфиденциальности</span></p></div>
+    <div><p>Я согласен с <span><Link to={'/politika'}>политикой конфиденциальности</Link></span></p></div>
 </div>
   </div>
 </form>

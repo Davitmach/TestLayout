@@ -6,6 +6,7 @@ import './banner.scss';
 export default function Banner() {
 
   return (
+    <div className='Banner'>
    <div className='Banner_container'>
     <div className='Mini_boxes_box'>
     
@@ -25,6 +26,7 @@ export default function Banner() {
 
     </div>
     <div className='Info_box'>Ваша команда по эффективной разработке</div>
+   </div>
    </div>
   );
 }

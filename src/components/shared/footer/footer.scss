@@ -1,100 +1,109 @@
 footer {
 
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-.Footer_box {
-    max-width: 1240px;
-    margin: auto;
-    padding: 100px;
-    display: flex;
-    align-items: start;
+    align-items:stretch;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    &>div {
-        flex: 1 1;
-        @media (max-width:921px) {
-            flex: none;
-        }
+
+    background-color: #E5E5D9;
+    padding: 40px 180px;
+    @media (max-width:1440px) {
+        padding: 40px 90px 40px;
+       
+    }
+    @media (max-width:1280px) {
+        padding: 40px 45px 40px;
+       
+    }
+    @media (max-width:768px) {
+        padding: 40px 30px 40px;
+      
+    }
+    @media (max-width:674px) {
+        flex-direction: column;
+    }
+    @media (max-width:512px) {
+        padding: 40px 10px 40px;
+      
+    }
+    @media (max-width:320px) {
+        padding: 40px 10px 40px;
+       
     }
     
     &>div:last-child {
-        flex: 2 2;
+        align-items: end;
+        @media (max-width:674px) {
+          align-items: center;
+        }
     }
-    @media (min-width:545px ) and (max-width:1236px) {
-        padding: 100px 10px ;
+    .Logo {
+        a {
+            color: #162C00;
+            font-family: Tektur;
+            font-size: 24px;
+            font-weight: 400;       text-decoration: none;
+        }
+     
+        @media (max-width:674px) {
+           text-align: center;
+           margin-bottom: 40px;
+        }
+    }
+    .C {
+        color: #162C00;
+        font-weight: 300;
+      
+        font-size: 16px;
+        @media (max-width:674px) {
+          display: none;
          }
-         @media (max-width:544px) {
-             padding: 100px 10px ;
-           }
-           &>div {
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 0 50px;
-            height: 100%;
-            @media (max-width:921px) {
-                padding: 0 20px;
-            }
-           ul {
+    
+    }
+    .C_Low_res {
+        color: #162C00;
+        font-weight: 300;
+      
+        font-size: 16px;
+        display: none;
+        @media (max-width:674px){
+            display: block;
+           
+        }
+    }
+    &>div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      
+        gap: 20px;
+        ul {
             display: flex;
-            align-items: start;
-            justify-content: center;
-            flex-direction: column;
-            list-style: none;
-            gap: 10px;
-            &>li:first-child {
-                margin-bottom: 25px;
-            }
-            li {
-                font-size: 26px;
-                font-weight: 500;
-                a {
-                    text-decoration: none;
-                    font-size: 14px;
-                    font-weight: 400;
-                }
-            }}
-           }
-           .Description_box {
-            display: flex;
-            align-items: start;
-            justify-content: center;
-            flex-direction: column;
-            gap: 25px;
-            p {
-                
-                color:  rgba(255, 255, 255, 0.5);
-                
-                font-size: 14px;
-                font-weight: 400;
-                @media (max-width:921px) {
-                    width: 300px;
-                }
-                span {
-                    color: rgba(255, 255, 255, 1);
-                    font-size: 14px;
-                    font-weight: 400;
-                    cursor: pointer;
-                }
-            }
-            .Rights {
-                color: rgba(255, 255, 255, 0.5);
-                font-size: 14px;
-                font-weight: 400;
-                cursor: pointer;
-                transition: .4s;
-                &:hover {
-                    color: rgba(255, 255, 255, 1);
-                }
-            }
-           }
+align-items: center;
+justify-content: center;
+gap: 20px;
+list-style: none;
+@media (max-width:674px) {
+    flex-direction: column;
+    gap: 30px;
 }
+li {
+ 
+        text-decoration: none;
+        color: #162C00;
+        font-size: 18px;
+    
+}
+        }
+        .Politika {
+            color: #162C00;
+            font-weight: 300;
+            font-size: 16px;
+            text-decoration: underline;
+            @media (max-width:674px) {
+             margin-top: 20px;
+            }
+        }
+    }
 
-           .Bg {
-            width: 100%;
-            height: 50px;
-            background: linear-gradient(278.85deg, #CDA5D5 3.36%, #FBE4FF 48.72%, #E8FE74 99.06%);
-
-           }
 }
