@@ -47,6 +47,11 @@ gap: 50px;
     padding: 8px 10px 20px;
     gap: 12px;
 }
+@media (max-height:951px) {
+    padding: 8px 10px 20px;
+    gap: 12px;
+    
+}
     .Info_box {
         max-width: 1300px;
         color: #162C00;
@@ -66,7 +71,7 @@ gap: 50px;
         @media (max-height:951px) {
             font-size: 35px;
             max-width: 900px;
-            margin-top: 10vh;
+            
             
         }
     }
