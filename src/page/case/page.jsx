@@ -26,9 +26,9 @@ const ImageSlider = ({ imagePaths }) => {
   if(imagePaths) {
     return (
       <div className="image-slider">
-   <div>
+   <div className='img'>
     <div><img width={400}  src={imagePaths[currentIndex]}/></div>
-    <div>
+    <div className='btn'>
         <div onClick={prevImage}><svg width="50" height="94" viewBox="0 0 50 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M48 2L3 47L48 92" stroke="#FC739F" strokeWidth="3"/>
 </svg>
@@ -39,7 +39,7 @@ const ImageSlider = ({ imagePaths }) => {
 </div>
     </div>
    </div>
-   <div>{`${currentIndex+1}/${imagePaths.length}`}</div>
+   <div className='counter'>{`${currentIndex+1}/${imagePaths.length}`}</div>
       </div>
     );}
   };
@@ -69,16 +69,19 @@ export const Case = () => {
 
   return (
     <>
+    <div className="case">
       <div className='Case_Banner_Container'>
         <div className='Img'><img src={data?.img}/></div>
         <div className='Title'><div>{data?.title}</div></div>
       </div>
-      {/* <div className="Case_Info_Container">
+      </div>
+      <div className="Case_Info_Container">
        {data?.page.info.map((e,index)=> (
         <Info key={index} title={e.title} description={e.description}/>
        ))}
+         <ImageSlider imagePaths={data?.page?.img}/>
       </div>
-    <ImageSlider imagePaths={data?.page?.img}/> */}
+  
     </>
   );
 };
