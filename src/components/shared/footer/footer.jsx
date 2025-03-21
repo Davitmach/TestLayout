@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import './footer.scss';
 import {Link, useLocation} from 'react-router-dom'
 export default function Footer() {
     const path = useLocation();
+    const [active,setActive] = useState(false);
     const HandleScroll = (page)=> {
         if(path.pathname == '/') {
         document.querySelector(page).scrollIntoView({
@@ -9,7 +11,18 @@ export default function Footer() {
             block: 'start',
         })
      
-        }}
+        }
+    }
+    useEffect(()=> {
+if(path.pathname.includes('case')) {
+    setActive(true)
+    
+}
+else {
+    setActive(false)
+}
+    },[path])
+    if(active == false) {
     return(
        <footer>
    <div>
@@ -30,4 +43,10 @@ export default function Footer() {
    </div>
        </footer>
     )
+}
+else {
+    return(
+        <></>
+    )
+}
 }

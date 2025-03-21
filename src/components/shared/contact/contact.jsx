@@ -81,7 +81,7 @@ export default function Contact() {
 </div>
                     </div> } 
                     </div>
-                    <div><svg style={active == '2' ? {transform:'rotate(0deg)'} :{transform:'rotate(180deg)'}} width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div><svg style={active == '3' ? {transform:'rotate(0deg)'} :{transform:'rotate(180deg)'}} width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 12L11.5 1L1 12" stroke="#0C2200" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg></div>
                    

@@ -1,10 +1,61 @@
+.Push {
+    position: absolute;
+  
+    display: flex;
+    background-color: #FFFFF1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 495px;
+    top: 250px;
+    transition: .4s;
+
+    height: 67px;
+    @media (max-width:1024px) {
+       width:  422px;
+    }
+    @media (max-width:768px) {
+       top: 450px;
+     }
+    @media (max-width:480px) {
+        width: 313px;
+        top: 500px;
+    }
+    h1 {
+        color: #0C2200;
+        font-size: 24px;
+        font-weight: 400;
+@media (max-width:1024px) {
+    font-size: 20px;
+}
+@media (max-width:480px) {
+  font-size: 14px;
+}
+    }
+}
+.Push_Active {
+    right: 0;
+}
+.Push_Disable {
+    right: -495px;
+    @media (max-width:1024px) {
+        right: -422px;
+    }
+    @media (max-width:480px) {
+        right: -313px;
+    }
+}
 .Mail_container {
+    overflow: hidden;
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #FFFFF1;
+    position: relative;
     &>div {
         width: 100%;
         max-width: 1920px;
@@ -67,6 +118,8 @@
        }}
     }
 .Form_box {
+    position: relative;
+
     form {
     display: flex;
     flex-direction: column;

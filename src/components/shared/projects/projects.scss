@@ -1,3 +1,17 @@
+.Not_jobs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #0C220066;
+    font-family: Tektur;
+    margin-bottom: 289px;
+
+    @media (max-width:1024px) {
+        font-size: 20px;
+    }
+}
 .Projects_box {
     width: 100%;
 
@@ -180,6 +194,7 @@ margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     gap: 20px;
     .Info_box {
         display: flex;
@@ -202,7 +217,10 @@ margin-top: 40px;
     .Img_box {
         width: 100%;
         aspect-ratio: 1/1;
-        background-color: #D9D9D9;
+img {
+    width: 100%;
+    height: 100%;
+}
     }
  }
 }    
