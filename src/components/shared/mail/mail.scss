@@ -1,5 +1,5 @@
 .Push {
-    position: absolute;
+    position: fixed;
   
     display: flex;
     background-color: #FFFFF1;
@@ -9,7 +9,7 @@
     justify-content: center;
     gap: 20px;
     width: 495px;
-    top: 250px;
+    top: 50%;
     transition: .4s;
 
     height: 67px;
