@@ -28,11 +28,11 @@
     gap: 24px;
     padding: 25px 45px 50px;
   }
-  @media (max-width: 768px) {
-    gap: 392px;
-    padding: 394px 30px 50px;
-    min-height: calc(100vh - 74px);
-  }
+  // @media (max-width: 768px) {
+  //   gap: 392px;
+  //   padding: 394px 30px 50px;
+
+  // }
   @media (max-width: 480px) {
     gap: 218px;
     padding: 207px 10px 50px;
