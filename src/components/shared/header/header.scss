@@ -285,6 +285,13 @@ font-size: 36px;
 font-weight: 600;
 }
 
+ @media (max-width:480px) {
+    font-size: 32px;
+ }
+ @media (max-width:460px) {
+    font-size: 24px;
+ }
+
             }
         }
         .Active {
