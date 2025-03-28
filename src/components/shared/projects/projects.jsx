@@ -20,6 +20,7 @@ export default function Projects() {
       title: "Перемены",
       date: "Февраль 2025",
       page: {
+        inner:'/case/перемены/inner.png',
         img: [
           "/case/перемены/1.png",
           "/case/перемены/2.png",
@@ -71,15 +72,91 @@ export default function Projects() {
     },
     {
       type:"сайт",
-      img: "/case/img2.png",
+      img: "/case/woodcraft/main.png",
       title: "WoodCraft studio",
       date: "Январь 2025",
+      page: {
+        inner:'/case/woodcraft/inner.png',
+        img: ["/case/woodcraft/1.png","/case/woodcraft/2.png","/case/woodcraft/3.png","/case/woodcraft/4.png","/case/woodcraft/5.png","/case/woodcraft/6.png","/case/woodcraft/7.png","/case/woodcraft/8.png","/case/woodcraft/9.png","/case/woodcraft/10.png","/case/woodcraft/11.png","/case/woodcraft/12.png","/case/woodcraft/13.png","/case/woodcraft/14.png","/case/woodcraft/15.png"],
+        info: [
+          {
+            title: "Цель",
+            description: `Создать интернет-магазин для продажи авторских изделий из дерева (мебель, декор, посуда). Сайт должен быть современным, стильным и удобным, чтобы привлекать клиентов и стимулировать покупки`,
+          },
+          {
+            title: "Задачи сайта",
+            description: `-Демонстрация ассортимента товаров с возможностью онлайн-заказа
+-Упрощение процесса выбора и покупки
+
+`,
+          },
+          {
+            title: "Проблемы",
+            description: `1. Низкий уровень доверия через визуал
+2. Неудобный пользовательский опыт
+3. Недостаточная экологичность в дизайн
+4. Недостаточная экологичность в дизайн
+
+`,
+          }
+      
+        ],
+      },
     },
     {
       type:"сайт",
-      img: "/case/img3.png",
+      img: "/case/frontcur/main.png",
+      title: "FrontCur",
+      date: "Январь 2025",
+      page: {
+        inner:'/case/frontcur/inner.png',
+        img: ["/case/frontcur/1.png","/case/frontcur/2.png","/case/frontcur/3.png","/case/frontcur/4.png","/case/frontcur/5.png","/case/frontcur/6.png"],
+        info: [
+          {
+            title: "О проекте",
+            description: `Сайт, который презентует курс FRONTEND-разработчика от школы разработчиков Frontcur.
+`,
+          },
+          {
+            title: "Для кого сайт",
+            description: `Люди, которые:
+Сомневаются в профессии. Сайт помогает школе убедить в перспективности профессии
+Ищут себя
+Хотят преобрести новые навыки и хотят понять какие навыки они могут получить в этой школе и как
+Хотят преобрести новые навыки и хотят понять какие навыки они могут получить в этой школе и как
+
+
+`,
+          },
+        
+      
+        ],
+      },
+    },
+    {
+      type:"сайт",
+      img: "/case/beatmap/main.png",
       title: "BeatMap",
       date: "Декабрь 2024",
+      page: {
+        inner:'/case/beatmap/inner.png',
+        img: ["/case/beatmap/1.png","/case/beatmap/2.png","/case/beatmap/3.png","/case/beatmap/4.png","/case/beatmap/5.png","/case/beatmap/6.png","/case/beatmap/7.png","/case/beatmap/8.png","/case/beatmap/9.png","/case/beatmap/10.png"],
+        info: [
+          {
+            title: "О проекте",
+            description: `BeatMap - это сервис для поиска и покупки билетов на концерты в Санкт-Петербурге.`,
+          },
+          {
+            title: "Фишки:",
+            description: `-Есть возможность послушать сниппет артиста
+-Есть выбор концертов на карте
+-Есть выбор концертов по дате
+
+`,
+          }
+      
+        ],
+      },
     },
     {
       type:"сайт",
@@ -87,6 +164,7 @@ export default function Projects() {
       title: "TransNext",
       date: "Февраль 2025",
       page: {
+        inner:'/case/trans/inner.png',
         img: ["/case/trans/1.png"],
         info: [
           {
@@ -150,6 +228,7 @@ export default function Projects() {
       title: "SuperM VPN",
       date: "Январь 2040",
       page: {
+        inner:'/case/vpn/inner.png',
         img: ["/case/vpn/1.PNG", "/case/vpn/2.PNG", "/case/vpn/2.PNG"],
         info: [
           {

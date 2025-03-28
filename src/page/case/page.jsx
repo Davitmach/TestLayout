@@ -71,7 +71,7 @@ export const Case = () => {
     <>
     <div className="case">
       <div className='Case_Banner_Container'>
-        <div className='Img'><img src={data?.img}/></div>
+        <div className='Img'><img src={data?.page?.inner}/></div>
         <div className='Title'><div>{data?.title}</div></div>
       </div>
       </div>
