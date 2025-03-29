@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './header.scss';
 import useStore from '../../../store';
-import {Link,useLocation} from 'react-router-dom'
+import {Link,useLocation, useNavigate} from 'react-router-dom'
 
 export default function Header() {
     const path = useLocation();
@@ -9,7 +9,7 @@ export default function Header() {
     const [active,setActive] = useState(false)
     const { activeSection, setActiveSection } = useStore();
 const [menuActive,setMenuActive] = useState(false);
-   
+   const nav = useNavigate();
     const HandleScroll = (page)=> {
         if(path.pathname == '/') {
         document.querySelector(page).scrollIntoView({
@@ -17,7 +17,12 @@ const [menuActive,setMenuActive] = useState(false);
             block: 'start',
         })
   setMenuActive(false)
-        }}
+        }
+        else {
+nav(`/${page}`)
+
+        }
+    }
 
 
 
@@ -61,7 +66,7 @@ else {
              ><h1><Link to={'/'}> IT Performance</Link></h1></div>
             <div className={`Menu_box ${menuActive ? 'Menu_active' : 'Menu_disable'}`}>
         <div onClick={()=> HandleScroll('#Mail')}  >Стать клиентом</div>
-        <div  onClick={()=> HandleScroll('#Comand')}><h2>О команде</h2><span>кто мы?</span></div>
+        <div  onClick={()=> HandleScroll('#Service')}><h2>О команде</h2><span>кто мы?</span></div>
         <div  onClick={()=> HandleScroll('#Comand')}><h2>Кейсы</h2><span>Наш опыт</span></div>
         <div  onClick={()=> HandleScroll('#Service')}><h2>Услуги</h2><span>что умеем?</span></div>
         <div  onClick={()=> HandleScroll('#Contact')}><h2>Контакты</h2><span>поговорим?</span></div>

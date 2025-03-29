@@ -17,7 +17,20 @@ function ScrollToTop() {
 
   return null;
 }
+const ScrollToHashElement = () => {
+  const location = useLocation();
 
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
+  return null;
+};
 function App() {
  
   return (
@@ -25,6 +38,7 @@ function App() {
       <Router>
         <Header />
         <ScrollToTop />
+        <ScrollToHashElement/>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

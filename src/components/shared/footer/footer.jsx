@@ -1,16 +1,21 @@
 import { useEffect, useState } from 'react';
 import './footer.scss';
-import {Link, useLocation} from 'react-router-dom'
+import {Link, useLocation, useNavigate} from 'react-router-dom'
 export default function Footer() {
     const path = useLocation();
     const [active,setActive] = useState(false);
+    const nav = useNavigate()
     const HandleScroll = (page)=> {
         if(path.pathname == '/') {
         document.querySelector(page).scrollIntoView({
             behavior:'smooth',
             block: 'start',
         })
-     
+
+        }
+        else {
+nav(`/${page}`)
+
         }
     }
     useEffect(()=> {
@@ -32,7 +37,7 @@ else {
    <div>
     <div>
         <ul>
-            <li onClick={()=> HandleScroll('#Comand')}>О команде</li>
+            <li onClick={()=> HandleScroll('#Service')}>О команде</li>
             <li onClick={()=> HandleScroll('#Comand')}>Кейсы</li>
             <li onClick={()=> HandleScroll('#Service')}>Услуги</li>
             <li onClick={()=> HandleScroll('#Contact')}>Контакты</li>
