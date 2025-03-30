@@ -10,19 +10,48 @@ export default function Header() {
     const { activeSection, setActiveSection } = useStore();
 const [menuActive,setMenuActive] = useState(false);
    const nav = useNavigate();
-    const HandleScroll = (page)=> {
-        if(path.pathname == '/') {
-        document.querySelector(page).scrollIntoView({
-            behavior:'smooth',
-            block: 'start',
-        })
-  setMenuActive(false)
+   const HandleScroll = (page) => {
+    if (path.pathname === '/') {
+      const targetElement = document.querySelector(page);
+      const header = document.querySelector('header'); // Получаем элемент header
+      if (targetElement && header) {
+        // Получаем высоту header
+        const headerHeight = header.offsetHeight;
+  
+        // Получаем позицию элемента
+        const position = targetElement.getBoundingClientRect();
+  
+        // Прокручиваем страницу с учётом высоты header
+        window.scrollTo({
+          top: position.top + window.pageYOffset - headerHeight, // Учитываем высоту header
+          left: 0,
+          behavior: 'smooth',
+        });
+        setMenuActive(false);
+      }
+    } else {
+      // Переход на другую страницу
+      nav(`/`);
+      setTimeout(() => {
+        const targetElement = document.querySelector(page);
+        const header = document.querySelector('header');
+        if (targetElement && header) {
+          // Получаем высоту header
+          const headerHeight = header.offsetHeight;
+  
+          // Получаем позицию элемента
+          const position = targetElement.getBoundingClientRect();
+  
+          // Прокручиваем страницу с учётом высоты header
+          window.scrollTo({
+            top: position.top + window.pageYOffset - headerHeight,
+            left: 0,
+            behavior: 'smooth',
+          });
         }
-        else {
-nav(`/${page}`)
-
-        }
+      }, 100);
     }
+  };
 
 
 
@@ -90,9 +119,9 @@ else {
             </div>
 
             <div className='to_be_client'>
-                <a className='Client' href="#Mail">Стать клиентом</a>
-                <a className='Case' href="">Кейсы</a>
-                <a className='Service' href="">Услуги</a>
+                <div className='Client' onClick={()=>HandleScroll('#Mail')} >Стать клиентом</div>
+                <div className='Case'  onClick={()=>HandleScroll('#Comand')} >Кейсы</div>
+                <div className='Service'  onClick={()=>HandleScroll('#Service')}>Услуги</div>
                 </div>
             
             {menuActive ==false &&<svg 
@@ -102,7 +131,7 @@ else {
   height={"18"} 
   viewBox={"0 0 30 18"} 
   fill="none" 
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"    
 >
 
       <path d="M30 1.5H0V0.5H30V1.5Z" fill="#021800"/>

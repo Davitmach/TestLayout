@@ -8,6 +8,7 @@ import { Politika } from './page/politika/page';
 import { Case } from './page/case/page';
 import { useEffect } from 'react';
 
+
 function ScrollToTop() {
   const location = useLocation()
 
@@ -39,6 +40,7 @@ function App() {
         <Header />
         <ScrollToTop />
         <ScrollToHashElement/>
+    
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

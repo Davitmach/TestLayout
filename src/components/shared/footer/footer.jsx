@@ -5,19 +5,48 @@ export default function Footer() {
     const path = useLocation();
     const [active,setActive] = useState(false);
     const nav = useNavigate()
-    const HandleScroll = (page)=> {
-        if(path.pathname == '/') {
-        document.querySelector(page).scrollIntoView({
-            behavior:'smooth',
-            block: 'start',
-        })
-
+    const HandleScroll = (page) => {
+        if (path.pathname === '/') {
+          const targetElement = document.querySelector(page);
+          const header = document.querySelector('header'); // Получаем элемент header
+          if (targetElement && header) {
+            // Получаем высоту header
+            const headerHeight = header.offsetHeight;
+      
+            // Получаем позицию элемента
+            const position = targetElement.getBoundingClientRect();
+      
+            // Прокручиваем страницу с учётом высоты header
+            window.scrollTo({
+              top: position.top + window.pageYOffset - headerHeight, // Учитываем высоту header
+              left: 0,
+              behavior: 'smooth',
+            });
+          
+          }
+        } else {
+          // Переход на другую страницу
+          nav(`/`)
+          setTimeout(() => {
+            const targetElement = document.querySelector(page);
+            const header = document.querySelector('header');
+            if (targetElement && header) {
+              // Получаем высоту header
+              const headerHeight = header.offsetHeight;
+      
+              // Получаем позицию элемента
+              const position = targetElement.getBoundingClientRect();
+      
+              // Прокручиваем страницу с учётом высоты header
+              window.scrollTo({
+                top: position.top + window.pageYOffset - headerHeight,
+                left: 0,
+                behavior: 'smooth',
+              });
+            }
+          }, 100);;
         }
-        else {
-nav(`/${page}`)
-
-        }
-    }
+      };
     useEffect(()=> {
 if(path.pathname.includes('case')) {
     setActive(true)
