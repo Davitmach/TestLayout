@@ -85,7 +85,7 @@ export default function Contact() {
                    
                 </div>
                 <div className={active == '3'?'Active' :''} onClick={()=> HandleActive('3')}>
-                    <div> <div className="Title">4. Определяем сроки и бюджет. </div>
+                    <div> <div className="Title">3. Определяем сроки и бюджет. </div>
                    {active == '3' &&<div className="Info_box">
                         <div className="White">
                        </div>
