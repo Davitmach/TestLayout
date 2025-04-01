@@ -29,11 +29,11 @@ const ImageSlider = ({ imagePaths }) => {
    <div className='img'>
     <div><img width={400}  src={imagePaths[currentIndex]}/></div>
     <div className='btn'>
-        <div onClick={prevImage}><svg width="50" height="94" viewBox="0 0 50 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div onClick={prevImage} style={{transition:'.4s',opacity:currentIndex == 0?'0.5':'1' }}><svg width="50" height="94" viewBox="0 0 50 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M48 2L3 47L48 92" stroke="#FC739F" strokeWidth="3"/>
 </svg>
 </div>
-        <div onClick={nextImage}><svg width="50" height="94" viewBox="0 0 50 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div onClick={nextImage} style={{transition:'.4s',opacity:currentIndex == imagePaths.length-1?'0.5':'1' }}><svg width="50" height="94" viewBox="0 0 50 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2 2L47 47L2 92" stroke="#FC739F" strokeWidth="3"/>
 </svg>
 </div>

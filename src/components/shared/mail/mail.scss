@@ -1,3 +1,8 @@
+
+span {
+    font-size: 13px;
+    color: red;
+}
 .Push {
     position: fixed;
   
@@ -130,6 +135,8 @@
 flex-direction: column;
 gap: 10px;
 input {
+    max-width: 353px;
+    width: 100%;
     outline: none;
     padding: 13px 20px;
     border-radius: 20px;
