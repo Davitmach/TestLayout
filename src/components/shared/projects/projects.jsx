@@ -368,7 +368,7 @@ export default function Projects() {
 
               <div className="Types">
                 <div
-                  onClick={() => HandleChange("сайт")}
+                  onClick={() => HandleChange("Создание сайтов")}
                   className={active == "сайт" && "Active"}
                 >
                   Создание сайтов
