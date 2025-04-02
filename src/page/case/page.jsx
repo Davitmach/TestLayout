@@ -24,10 +24,13 @@ const ImageSlider = ({ imagePaths }) => {
           }
     };
   if(imagePaths) {
+    const link = imagePaths[currentIndex]
+    const imgId = typeof link === "string" ? link.match(/id=([^&]+)/)?.[1] : "";
+    
     return (
       <div className="image-slider">
    <div className='img'>
-    <div><img width={400}  src={imagePaths[currentIndex]}/></div>
+    <div><img width={400} src={`https://lh3.googleusercontent.com/d/${imgId}=w1000-h1000`}  /></div>
     <div className='btn'>
         <div onClick={prevImage} style={{transition:'.4s',opacity:currentIndex == 0?'0.5':'1' }}><svg width="50" height="94" viewBox="0 0 50 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M48 2L3 47L48 92" stroke="#FC739F" strokeWidth="3"/>
@@ -56,6 +59,8 @@ export const Case = () => {
       try {
         // Deserialize the data from JSON
         const caseData = JSON.parse(caseDataString);
+        console.log(caseData);
+        
         setData(caseData);
       } catch (error) {
         console.error("Error parsing caseData:", error);
@@ -66,20 +71,23 @@ export const Case = () => {
   useEffect(() => {
     console.log(data);
   }, [data]);
-
+  const imgId = typeof data?.innerimg === "string" ? data?.innerimg.match(/id=([^&]+)/)?.[1] : "";
+  const imgUrl = `https://lh3.googleusercontent.com/d/${imgId}=w1000-h1000`;
+  console.log("Image URL:", imgUrl);
+  
   return (
     <>
     <div className="case">
       <div className='Case_Banner_Container'>
-        <div className='Img'><img src={data?.page?.inner}/></div>
+        <div className='Img'><img src={`https://lh3.googleusercontent.com/d/${imgId}=w704-h396`}/></div>
         <div className='Title'><div>{data?.title}</div></div>
       </div>
       </div>
       <div className="Case_Info_Container">
-       {data?.page.info.map((e,index)=> (
+       {data?.info.map((e,index)=> (
         <Info key={index} title={e.title} description={e.description}/>
        ))}
-         <ImageSlider imagePaths={data?.page?.img}/>
+         <ImageSlider imagePaths={data?.images}/>
       </div>
   
     </>
