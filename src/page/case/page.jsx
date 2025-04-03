@@ -30,7 +30,7 @@ const ImageSlider = ({ imagePaths }) => {
     return (
       <div className="image-slider">
    <div className='img'>
-    <div><img width={400} src={`https://lh3.googleusercontent.com/d/${imgId}=w1000-h1000`}  /></div>
+    <div><img width={400} src={imagePaths[currentIndex]}  /></div>
     <div className='btn'>
         <div onClick={prevImage} style={{transition:'.4s',opacity:currentIndex == 0?'0.5':'1' }}><svg width="50" height="94" viewBox="0 0 50 94" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M48 2L3 47L48 92" stroke="#FC739F" strokeWidth="3"/>
@@ -73,13 +73,13 @@ export const Case = () => {
   }, [data]);
   const imgId = typeof data?.innerimg === "string" ? data?.innerimg.match(/id=([^&]+)/)?.[1] : "";
   const imgUrl = `https://lh3.googleusercontent.com/d/${imgId}=w1000-h1000`;
-  console.log("Image URL:", imgUrl);
+
   
   return (
     <>
     <div className="case">
       <div className='Case_Banner_Container'>
-        <div className='Img'><img src={`https://lh3.googleusercontent.com/d/${imgId}=w704-h396`}/></div>
+        <div className='Img'><img src={data?.innerimg}/></div>
         <div className='Title'><div>{data?.title}</div></div>
       </div>
       </div>

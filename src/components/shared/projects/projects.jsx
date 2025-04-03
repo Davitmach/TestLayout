@@ -369,31 +369,31 @@ export default function Projects() {
               <div className="Types">
                 <div
                   onClick={() => HandleChange("Создание сайтов")}
-                  className={active == "сайт" && "Active"}
+                  className={active == "Создание сайтов" && "Active"}
                 >
                   Создание сайтов
                 </div>
                 <div
-                  onClick={() => HandleChange("раз")}
-                  className={active == "раз" && "Active"}
+                  onClick={() => HandleChange("Разработка ботов")}
+                  className={active == "Разработка ботов" && "Active"}
                 >
                   Разработка ботов
                 </div>
                 <div
-                  onClick={() => HandleChange("веб")}
-                  className={active == "веб" && "Active"}
+                  onClick={() => HandleChange("Веб-дизайн")}
+                  className={active == "Веб-дизайн" && "Active"}
                 >
                   Веб-дизайн
                 </div>
                 <div
-                  onClick={() => HandleChange("ии")}
-                  className={active == "ии" && "Active"}
+                  onClick={() => HandleChange("Интеграция ИИ")}
+                  className={active == "Интеграция ИИ" && "Active"}
                 >
                   Интеграция ИИ
                 </div>
                 <div
-                  onClick={() => HandleChange("моб")}
-                  className={active == "моб" && "Active"}
+                  onClick={() => HandleChange("Мобильные приложения")}
+                  className={active == "Мобильные приложения" && "Active"}
                 >
                   Мобильные приложения
                 </div>
@@ -435,15 +435,13 @@ export default function Projects() {
     <div className="Jobs_box">
       {Cases.map((e, index) => {
         if (e.type === active) {
-          const imgId = typeof e.mainimg === "string" ? e.mainimg.match(/id=([^&]+)/)?.[1] : "";
+         
           return (
             <div key={index} onClick={() => handleCaseClick(e)}>
               <div className="Img_box">
-                {imgId ? (
-                  <img src={`https://lh3.googleusercontent.com/d/${imgId}=w1000-h1000`} alt={e.title} />
-                ) : (
-                  <p>Картинка не найдена</p>
-                )}
+           
+                  <img src={e.mainimg} alt={e.title} />
+            
               </div>
               <div className="Info_box">
                 <div className="Title_box">{e.title}</div>
