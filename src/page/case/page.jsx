@@ -50,23 +50,31 @@ export const Case = () => {
   const loc = useLocation();
   const [data, setData] = useState();
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    const queryParams = new URLSearchParams(loc.search);
-    const caseDataString = queryParams.get('caseData');
+  //   const queryParams = new URLSearchParams(loc.search);
+  //   const caseDataString = queryParams.get('caseData');
 
-    if (caseDataString) {
-      try {
-        // Deserialize the data from JSON
-        const caseData = JSON.parse(caseDataString);
-        console.log(caseData);
+  //   if (caseDataString) {
+  //     try {
+  //       // Deserialize the data from JSON
+  //       const caseData = JSON.parse(caseDataString);
+  //       console.log(caseData);
         
-        setData(caseData);
-      } catch (error) {
-        console.error("Error parsing caseData:", error);
-      }
-    }
-  }, [loc]);
+  //       setData(caseData);
+  //     } catch (error) {
+  //       console.error("Error parsing caseData:", error);
+  //     }
+  //   }
+  // }, [loc]);
+
+useEffect(()=> {
+const data = localStorage.getItem('case');
+const json = JSON.parse(data);
+setData(json)
+
+
+},[])
 
   useEffect(() => {
     console.log(data);

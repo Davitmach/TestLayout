@@ -348,10 +348,12 @@ export default function Projects() {
 //   ];
 
   const handleCaseClick = (caseData) => {
-    const queryString = new URLSearchParams({
-      caseData: JSON.stringify(caseData),
-    }).toString();
-    navigate(`/case?${queryString}`);
+    // const queryString = new URLSearchParams({
+    //   caseData: JSON.stringify(caseData),
+    // }).toString();
+    // navigate(`/case?${queryString}`);
+    localStorage.setItem('case',JSON.stringify(caseData))
+     navigate(`/case`);
   };
   return (
     <>
