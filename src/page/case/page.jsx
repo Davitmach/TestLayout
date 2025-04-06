@@ -87,15 +87,15 @@ setData(json)
     <>
     <div className="case">
       <div className='Case_Banner_Container'>
-        <div className='Img'><img src={data?.innerimg}/></div>
+        <div className='Img'><img src={data?.page.inner}/></div>
         <div className='Title'><div>{data?.title}</div></div>
       </div>
       </div>
       <div className="Case_Info_Container">
-       {data?.info.map((e,index)=> (
+       {data?.page?.info.map((e,index)=> (
         <Info key={index} title={e.title} description={e.description}/>
        ))}
-         <ImageSlider imagePaths={data?.images}/>
+         <ImageSlider imagePaths={data?.page?.img}/>
       </div>
   
     </>
