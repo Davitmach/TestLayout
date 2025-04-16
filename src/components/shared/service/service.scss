@@ -80,10 +80,15 @@
           font-size: 24px;
         }
       }
+      .FirstParagraph {
+        // max-width: 930px;
+        width: 100%;
+      }
       p {
         color: #0c2200;
         font-size: 18px;
         font-family: Open Sans;
+        
         @media (max-width: 1024px) {
           font-size: 16px;
         }

@@ -25,7 +25,7 @@ export default function Banner() {
         <div className='man'>менеджмент</div>
 
     </div>
-    <div className='Info_box'>Ваша команда по эффективной разработке</div>
+    <div className='Info_box'>Ваша команда <br/>по эффективной разработке</div>
    </div>
    </div>
   );
