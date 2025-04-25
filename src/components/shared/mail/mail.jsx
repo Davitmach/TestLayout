@@ -104,7 +104,7 @@ export const Mail = () => {
               <span>{errors.name}</span>
               <input ref={rule} type="text" placeholder='Должность' className={errors.rule ? 'error' : ''} />
               <span>{errors.rule}</span>
-              <input ref={number} type="text" placeholder='+1 000 000 00 00' className={errors.number ? 'error' : ''}
+              <input ref={number} type="text" placeholder='+7 000 000 00 00' className={errors.number ? 'error' : ''}
                 maxLength={16} // Ограничиваем количество символов
                 onInput={(e) => {
                   // Форматируем номер на лету
