@@ -63,23 +63,27 @@
     }
     .Info {
       display: flex;
-      align-items: center;
+      align-items: start;
       justify-content: space-between;
+      flex-direction: column;
       gap: 20px;
       @media (max-width: 480px) {
         flex-direction: column;
         gap: 20px;
       }
-      & > div:first-child {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+   .paragraphs {
+    display: flex;
+    gap: 20px;
+    @media (max-width:848px) {
+      flex-direction: column;
+    }
+   }
         .Title {
           color: #0c2200;
           font-family: Tektur;
           font-size: 24px;
         }
-      }
+      
       .FirstParagraph {
         // max-width: 930px;
         width: 100%;
@@ -215,6 +219,7 @@
           display: flex;
           flex-direction: column;
           gap: 20px;
+          width: 100%;
           & > div:last-child {
             display: flex;
             flex-wrap: wrap;
@@ -227,6 +232,8 @@
               color: #0c2200;
               font-size: 16px;
               font-weight: 400;
+              overflow: hidden;
+              text-overflow: ellipsis;
               @media (max-width: 1202px) {
                 width: 100%;
                 white-space: nowrap;
@@ -259,6 +266,8 @@
               font-weight: 400;
               display: flex;
               align-items: center;
+              overflow: hidden;
+              text-overflow: ellipsis;
               @media (max-width: 1024px) {
                 padding: 11px 10px;
               }

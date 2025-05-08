@@ -96,8 +96,8 @@ else {
             <div className={`Menu_box ${menuActive ? 'Menu_active' : 'Menu_disable'}`}>
         <div onClick={()=> HandleScroll('#Mail')}  >Стать клиентом</div>
         <div  onClick={()=> HandleScroll('#Service')}><h2>О команде</h2><span>кто мы?</span></div>
-        <div  onClick={()=> HandleScroll('#Comand')}><h2>Кейсы</h2><span>Наш опыт</span></div>
-        <div  onClick={()=> HandleScroll('#Service')}><h2>Услуги</h2><span>что умеем?</span></div>
+        <div className={menuActive &&'activeMenuCase'}  onClick={()=> HandleScroll('#Comand')}><h2>Кейсы</h2><span>Наш опыт</span></div>
+        <div  className={menuActive &&'activeMenuService'}   onClick={()=> HandleScroll('#Service')}><h2>Услуги</h2><span>что умеем?</span></div>
         <div  onClick={()=> HandleScroll('#Contact')}><h2>Контакты</h2><span>поговорим?</span></div>
         <div><svg  onClick={() => window.open("https://t.me/itperfomanceru", "_blank")}   style={{ cursor: "pointer" }} width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_2894_1221)">

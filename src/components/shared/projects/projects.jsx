@@ -436,13 +436,14 @@ IT-сообществах и чатах программистов.
       <div id="Comand" className="Projects_box">
         <div>
           <div className="Top_block">
+          <div className="Info_box">
+  
+  <h1>Наши работы</h1>
+  <span>Здесь можете оказаться вы</span>
+</div>
+<div className="bottom_block">
             <div className="Left_block">
-              <div className="Info_box">
-                <div></div>
-                <div></div>
-                <h1>Наши работы</h1>
-                <span>Здесь можете оказаться вы</span>
-              </div>
+   
 
               <div className="Types">
                 <div
@@ -496,6 +497,7 @@ IT-сообществах и чатах программистов.
                 <div>B2B</div>
                 <div>B2C</div>
               </div>
+            </div>
             </div>
           </div>
           {/* <div className="Not_jobs">Место для вашего кейса</div> */}
