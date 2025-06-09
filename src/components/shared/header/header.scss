@@ -60,6 +60,7 @@ a {
         transform: translateX(-40px);
         
             .Client{
+                transform: translateY(-2px);
                 color: #162C00;
                 font-weight: 400;
                 font-size: 18px !important;
@@ -220,7 +221,7 @@ a {
         }
         &>div  {
            h2 {
-          font-weight: 600 !important;
+          font-weight: 400 !important;
           font-size: 36px;
            }
         }
@@ -310,11 +311,11 @@ font-size: 24px;
 white-space: nowrap;
 @media (max-width:1789px) {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
 }
 @media (max-width:1532px) {
 font-size: 36px;
-font-weight: 600;
+font-weight: 400;
 }
 
  @media (max-width:480px) {

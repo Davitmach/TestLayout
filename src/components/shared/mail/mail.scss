@@ -59,7 +59,7 @@ span {
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+   
     background-color: #FFFFF1;
     position: relative;
     &>div {
@@ -68,7 +68,7 @@ span {
         margin: auto;
         padding: 120px 180px 350px;
         display: flex;
-        justify-content: center;
+       justify-content: space-between;
         @media (max-width:1024px) {
             justify-content: space-between;
         }
